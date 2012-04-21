@@ -1,0 +1,14 @@
+E:\Braude\Project\part 2\Accord.NET\Sources\Accord.Math\bin\x86\Release\Accord.Math.dll
+E:\Braude\Project\part 2\Accord.NET\Sources\Accord.Math\bin\x86\Release\AForge.dll
+E:\Braude\Project\part 2\Accord.NET\Sources\Accord.Math\bin\x86\Release\AForge.Math.dll
+E:\Braude\Project\part 2\Accord.NET\Sources\Accord.Math\obj\x86\Release\ResolveAssemblyReference.cache
+E:\Braude\Project\part 2\Accord.NET\Sources\Accord.Math\obj\x86\Release\Accord.Math.dll
+E:\Braude\Project\part 2\Phase 2\Accord.Math\bin\x86\Release\Accord.Math.dll
+E:\Braude\Project\part 2\Phase 2\Accord.Math\obj\x86\Release\ResolveAssemblyReference.cache
+E:\Braude\Project\part 2\Phase 2\Accord.Math\obj\x86\Release\Accord.Math.dll
+C:\Semi-Supervised Sites - Phase B\Accord.Math\bin\x86\Release\Accord.Math.dll
+C:\Semi-Supervised Sites - Phase B\Accord.Math\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Semi-Supervised Sites - Phase B\Accord.Math\obj\x86\Release\Accord.Math.dll
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Accord.Math\bin\x86\Release\Accord.Math.dll
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Accord.Math\obj\x86\Release\ResolveAssemblyReference.cache
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Accord.Math\obj\x86\Release\Accord.Math.dll

@@ -1,0 +1,9 @@
+E:\Braude\Project\part 2\Phase 2\PCA_Logic\bin\Debug\PCA_Logic.exe
+E:\Braude\Project\part 2\Phase 2\PCA_Logic\bin\Debug\PCA_Logic.pdb
+E:\Braude\Project\part 2\Phase 2\PCA_Logic\bin\Debug\Accord.Math.dll
+E:\Braude\Project\part 2\Phase 2\PCA_Logic\bin\Debug\AForge.Math.dll
+E:\Braude\Project\part 2\Phase 2\PCA_Logic\bin\Debug\AForge.dll
+E:\Braude\Project\part 2\Phase 2\PCA_Logic\bin\Debug\Accord.Math.pdb
+E:\Braude\Project\part 2\Phase 2\PCA_Logic\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Braude\Project\part 2\Phase 2\PCA_Logic\obj\x86\Debug\PCA_Logic.exe
+E:\Braude\Project\part 2\Phase 2\PCA_Logic\obj\x86\Debug\PCA_Logic.pdb

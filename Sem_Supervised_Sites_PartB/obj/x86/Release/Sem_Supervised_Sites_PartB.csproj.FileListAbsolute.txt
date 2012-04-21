@@ -1,0 +1,122 @@
+E:\Braude\Project\part 2\Phase 2\GUI\obj\x86\Release\Sem_Supervised_Sites_PartA-GUI.exe
+E:\Braude\Project\part 2\Phase 2\GUI\obj\x86\Release\Sem_Supervised_Sites_PartA-GUI.pdb
+E:\Braude\Project\part 2\Phase 2\GUI\bin\Release\Sem_Supervised_Sites_PartA-GUI.exe
+E:\Braude\Project\part 2\Phase 2\GUI\bin\Release\Sem_Supervised_Sites_PartA-GUI.pdb
+E:\Braude\Project\part 2\Phase 2\GUI\bin\Release\Accord.Math.dll
+E:\Braude\Project\part 2\Phase 2\GUI\bin\Release\AForge.Math.dll
+E:\Braude\Project\part 2\Phase 2\GUI\bin\Release\AForge.dll
+E:\Braude\Project\part 2\Phase 2\GUI\obj\x86\Release\ResolveAssemblyReference.cache
+E:\Braude\Project\part 2\Phase 2\GUI\obj\x86\Release\GUI.Form1.resources
+E:\Braude\Project\part 2\Phase 2\GUI\obj\x86\Release\GUI.Form2.resources
+E:\Braude\Project\part 2\Phase 2\GUI\obj\x86\Release\GUI.Form3.resources
+E:\Braude\Project\part 2\Phase 2\GUI\obj\x86\Release\GUI.Form4.resources
+E:\Braude\Project\part 2\Phase 2\GUI\obj\x86\Release\GUI.Properties.Resources.resources
+E:\Braude\Project\part 2\Phase 2\GUI\obj\x86\Release\GenerateResource.read.1.tlog
+E:\Braude\Project\part 2\Phase 2\GUI\obj\x86\Release\GenerateResource.write.1.tlog
+E:\Braude\Project\part 2\Phase 2\Sem_Supervised_Sites_PartB\obj\x86\Release\Sem_Supervised_Sites_PartA-GUI.exe
+E:\Braude\Project\part 2\Phase 2\Sem_Supervised_Sites_PartB\obj\x86\Release\Sem_Supervised_Sites_PartA-GUI.pdb
+E:\Braude\Project\part 2\Phase 2\Sem_Supervised_Sites_PartB\bin\Release\Sem_Supervised_Sites_PartA-GUI.exe
+E:\Braude\Project\part 2\Phase 2\Sem_Supervised_Sites_PartB\bin\Release\Sem_Supervised_Sites_PartA-GUI.pdb
+E:\Braude\Project\part 2\Phase 2\Sem_Supervised_Sites_PartB\bin\Release\Accord.Math.dll
+E:\Braude\Project\part 2\Phase 2\Sem_Supervised_Sites_PartB\bin\Release\AForge.Math.dll
+E:\Braude\Project\part 2\Phase 2\Sem_Supervised_Sites_PartB\bin\Release\AForge.dll
+E:\Braude\Project\part 2\Phase 2\Sem_Supervised_Sites_PartB\obj\x86\Release\ResolveAssemblyReference.cache
+E:\Braude\Project\part 2\Phase 2\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1.tlog
+E:\Braude\Project\part 2\Phase 2\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.write.1.tlog
+E:\Braude\Project\part 2\Phase 2\Sem_Supervised_Sites_PartB\obj\x86\Release\Sem_Supervised_Sites_PartB.Form1.resources
+E:\Braude\Project\part 2\Phase 2\Sem_Supervised_Sites_PartB\obj\x86\Release\Sem_Supervised_Sites_PartB.Form2.resources
+E:\Braude\Project\part 2\Phase 2\Sem_Supervised_Sites_PartB\obj\x86\Release\Sem_Supervised_Sites_PartB.Form3.resources
+E:\Braude\Project\part 2\Phase 2\Sem_Supervised_Sites_PartB\obj\x86\Release\Sem_Supervised_Sites_PartB.Form4.resources
+E:\Braude\Project\part 2\Phase 2\Sem_Supervised_Sites_PartB\obj\x86\Release\Sem_Supervised_Sites_PartB.Properties.Resources.resources
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\Sem_Supervised_Sites_PartA-GUI.exe
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\Sem_Supervised_Sites_PartA-GUI.pdb
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\Sem_Supervised_Sites_PartB.Form2.resources
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\Sem_Supervised_Sites_PartB.Form3.resources
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\Sem_Supervised_Sites_PartB.Form4.resources
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\Sem_Supervised_Sites_PartB.Properties.Resources.resources
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.write.1.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\bin\Release\Sem_Supervised_Sites_PartA-GUI.exe
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\bin\Release\Sem_Supervised_Sites_PartA-GUI.pdb
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\bin\Release\Accord.Math.dll
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\bin\Release\AForge.Math.dll
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\bin\Release\AForge.dll
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\Sem_Supervised_Sites_PartB.AddTopic.resources
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\Sem_Supervised_Sites_PartB.Form1.resources
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.179.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.write.179.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.write.314.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1051.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1107.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1149.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1157.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1179.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.688.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.write.1051.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1247.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1249.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.write.1249.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1281.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.write.1281.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1310.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.write.1310.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1311.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.write.1311.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1371.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1418.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1421.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1458.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.write.1638.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1643.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.write.1643.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1659.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.write.1659.tlog
+C:\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1846.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\Sem_Supervised_Sites_PartA-GUI.exe
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\Sem_Supervised_Sites_PartA-GUI.pdb
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\bin\Release\Sem_Supervised_Sites_PartA-GUI.exe
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\bin\Release\Sem_Supervised_Sites_PartA-GUI.pdb
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\bin\Release\Accord.Math.dll
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\bin\Release\AForge.Math.dll
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\bin\Release\AForge.dll
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\ResolveAssemblyReference.cache
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\Sem_Supervised_Sites_PartB.AddTopic.resources
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\Sem_Supervised_Sites_PartB.Form1.resources
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\Sem_Supervised_Sites_PartB.Form2.resources
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\Sem_Supervised_Sites_PartB.Form3.resources
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\Sem_Supervised_Sites_PartB.Form4.resources
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\Sem_Supervised_Sites_PartB.Properties.Resources.resources
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1051.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1107.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1149.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1157.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1179.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1247.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1249.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1281.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1310.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1311.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1371.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1418.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1421.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1458.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1643.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1659.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.179.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.1846.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.2158.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.3402.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.read.688.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.write.1.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.write.1051.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.write.1249.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.write.1281.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.write.1310.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.write.1311.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.write.1638.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.write.1643.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.write.1659.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.write.179.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\Sem_Supervised_Sites_PartB\obj\x86\Release\GenerateResource.write.314.tlog

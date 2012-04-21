@@ -1,0 +1,7 @@
+E:\Braude\Project\part 2\Accord.NET\Sources\Accord.Math\bin\x86\Debug\Accord.Math.dll
+E:\Braude\Project\part 2\Accord.NET\Sources\Accord.Math\bin\x86\Debug\Accord.Math.pdb
+E:\Braude\Project\part 2\Accord.NET\Sources\Accord.Math\bin\x86\Debug\AForge.dll
+E:\Braude\Project\part 2\Accord.NET\Sources\Accord.Math\bin\x86\Debug\AForge.Math.dll
+E:\Braude\Project\part 2\Accord.NET\Sources\Accord.Math\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Braude\Project\part 2\Accord.NET\Sources\Accord.Math\obj\x86\Debug\Accord.Math.dll
+E:\Braude\Project\part 2\Accord.NET\Sources\Accord.Math\obj\x86\Debug\Accord.Math.pdb

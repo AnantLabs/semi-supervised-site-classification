@@ -1,0 +1,29 @@
+E:\Braude\Project\part 2\MPCK_Logic\MPCK_Logic\bin\Release\MPCK_Logic.exe
+E:\Braude\Project\part 2\MPCK_Logic\MPCK_Logic\bin\Release\MPCK_Logic.pdb
+E:\Braude\Project\part 2\MPCK_Logic\MPCK_Logic\obj\x86\Release\ResolveAssemblyReference.cache
+E:\Braude\Project\part 2\MPCK_Logic\MPCK_Logic\obj\x86\Release\MPCK_Logic.exe
+E:\Braude\Project\part 2\MPCK_Logic\MPCK_Logic\obj\x86\Release\MPCK_Logic.pdb
+E:\Braude\Project\part 2\Phase 2\MPCK_Logic\obj\x86\Release\MPCK_Logic.exe
+E:\Braude\Project\part 2\Phase 2\MPCK_Logic\obj\x86\Release\MPCK_Logic.pdb
+E:\Braude\Project\part 2\Phase 2\MPCK_Logic\bin\Release\MPCK_Logic.exe
+E:\Braude\Project\part 2\Phase 2\MPCK_Logic\bin\Release\MPCK_Logic.pdb
+E:\Braude\Project\part 2\Phase 2\MPCK_Logic\obj\x86\Release\ResolveAssemblyReference.cache
+E:\Braude\Project\part 2\Phase 2\MPCK_Logic\bin\Release\Accord.Math.dll
+E:\Braude\Project\part 2\Phase 2\MPCK_Logic\bin\Release\AForge.Math.dll
+E:\Braude\Project\part 2\Phase 2\MPCK_Logic\bin\Release\AForge.dll
+C:\Semi-Supervised Sites - Phase B\MPCK_Logic\bin\Release\MPCK_Logic.exe
+C:\Semi-Supervised Sites - Phase B\MPCK_Logic\bin\Release\MPCK_Logic.pdb
+C:\Semi-Supervised Sites - Phase B\MPCK_Logic\bin\Release\Accord.Math.dll
+C:\Semi-Supervised Sites - Phase B\MPCK_Logic\bin\Release\AForge.Math.dll
+C:\Semi-Supervised Sites - Phase B\MPCK_Logic\bin\Release\AForge.dll
+C:\Semi-Supervised Sites - Phase B\MPCK_Logic\obj\x86\Release\ResolveAssemblyReference.cache
+C:\Semi-Supervised Sites - Phase B\MPCK_Logic\obj\x86\Release\MPCK_Logic.exe
+C:\Semi-Supervised Sites - Phase B\MPCK_Logic\obj\x86\Release\MPCK_Logic.pdb
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\MPCK_Logic\bin\Release\MPCK_Logic.exe
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\MPCK_Logic\bin\Release\MPCK_Logic.pdb
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\MPCK_Logic\bin\Release\Accord.Math.dll
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\MPCK_Logic\bin\Release\AForge.Math.dll
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\MPCK_Logic\bin\Release\AForge.dll
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\MPCK_Logic\obj\x86\Release\ResolveAssemblyReference.cache
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\MPCK_Logic\obj\x86\Release\MPCK_Logic.exe
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\MPCK_Logic\obj\x86\Release\MPCK_Logic.pdb

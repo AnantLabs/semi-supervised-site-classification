@@ -1,0 +1,5 @@
+E:\Braude\Project\part 2\Phase 2\MPCK_Logic\bin\Debug\MPCK_Logic.exe
+E:\Braude\Project\part 2\Phase 2\MPCK_Logic\bin\Debug\MPCK_Logic.pdb
+E:\Braude\Project\part 2\Phase 2\MPCK_Logic\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Braude\Project\part 2\Phase 2\MPCK_Logic\obj\x86\Debug\MPCK_Logic.exe
+E:\Braude\Project\part 2\Phase 2\MPCK_Logic\obj\x86\Debug\MPCK_Logic.pdb

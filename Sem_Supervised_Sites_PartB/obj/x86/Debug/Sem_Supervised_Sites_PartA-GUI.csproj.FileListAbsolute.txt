@@ -1,0 +1,38 @@
+d:\userdata\documents\visual studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\bin\Debug\Sem_Supervised_Sites_PartA-GUI.exe
+d:\userdata\documents\visual studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\bin\Debug\Sem_Supervised_Sites_PartA-GUI.pdb
+d:\userdata\documents\visual studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\ResolveAssemblyReference.cache
+d:\userdata\documents\visual studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\Sem_Supervised_Sites_PartA_GUI.Form1.resources
+d:\userdata\documents\visual studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\Sem_Supervised_Sites_PartA_GUI.Properties.Resources.resources
+d:\userdata\documents\visual studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\GenerateResource.read.1.tlog
+d:\userdata\documents\visual studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\GenerateResource.write.1.tlog
+d:\userdata\documents\visual studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\Sem_Supervised_Sites_PartA-GUI.exe
+d:\userdata\documents\visual studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\Sem_Supervised_Sites_PartA-GUI.pdb
+d:\userdata\documents\visual studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\Sem_Supervised_Sites_PartA_GUI.Form2.resources
+d:\userdata\documents\visual studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\Sem_Supervised_Sites_PartA_GUI.Form3.resources
+d:\userdata\documents\visual studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\Sem_Supervised_Sites_PartA_GUI.Form4.resources
+C:\Users\313945016\Desktop\UserData\My Documents\Visual Studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\Sem_Supervised_Sites_PartA-GUI.exe
+C:\Users\313945016\Desktop\UserData\My Documents\Visual Studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\Sem_Supervised_Sites_PartA-GUI.pdb
+C:\Users\313945016\Desktop\UserData\My Documents\Visual Studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\bin\Debug\Sem_Supervised_Sites_PartA-GUI.exe
+C:\Users\313945016\Desktop\UserData\My Documents\Visual Studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\bin\Debug\Sem_Supervised_Sites_PartA-GUI.pdb
+C:\Users\313945016\Desktop\UserData\My Documents\Visual Studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\313945016\Desktop\UserData\My Documents\Visual Studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\Sem_Supervised_Sites_PartA_GUI.Form1.resources
+C:\Users\313945016\Desktop\UserData\My Documents\Visual Studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\Sem_Supervised_Sites_PartA_GUI.Form2.resources
+C:\Users\313945016\Desktop\UserData\My Documents\Visual Studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\Sem_Supervised_Sites_PartA_GUI.Form3.resources
+C:\Users\313945016\Desktop\UserData\My Documents\Visual Studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\Sem_Supervised_Sites_PartA_GUI.Form4.resources
+C:\Users\313945016\Desktop\UserData\My Documents\Visual Studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\Sem_Supervised_Sites_PartA_GUI.Properties.Resources.resources
+C:\Users\313945016\Desktop\UserData\My Documents\Visual Studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\313945016\Desktop\UserData\My Documents\Visual Studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\GUI - פרוייקט סוף תואר - גרסה סופית\UserData\My Documents\Visual Studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\Sem_Supervised_Sites_PartA-GUI.exe
+C:\GUI - פרוייקט סוף תואר - גרסה סופית\UserData\My Documents\Visual Studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\Sem_Supervised_Sites_PartA-GUI.pdb
+C:\GUI - פרוייקט סוף תואר - גרסה סופית\UserData\My Documents\Visual Studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\bin\Debug\Sem_Supervised_Sites_PartA-GUI.exe
+C:\GUI - פרוייקט סוף תואר - גרסה סופית\UserData\My Documents\Visual Studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\bin\Debug\Sem_Supervised_Sites_PartA-GUI.pdb
+C:\GUI - פרוייקט סוף תואר - גרסה סופית\UserData\My Documents\Visual Studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\GUI - פרוייקט סוף תואר - גרסה סופית\UserData\My Documents\Visual Studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\Sem_Supervised_Sites_PartA_GUI.Form1.resources
+C:\GUI - פרוייקט סוף תואר - גרסה סופית\UserData\My Documents\Visual Studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\Sem_Supervised_Sites_PartA_GUI.Form2.resources
+C:\GUI - פרוייקט סוף תואר - גרסה סופית\UserData\My Documents\Visual Studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\Sem_Supervised_Sites_PartA_GUI.Form3.resources
+C:\GUI - פרוייקט סוף תואר - גרסה סופית\UserData\My Documents\Visual Studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\Sem_Supervised_Sites_PartA_GUI.Form4.resources
+C:\GUI - פרוייקט סוף תואר - גרסה סופית\UserData\My Documents\Visual Studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\Sem_Supervised_Sites_PartA_GUI.Properties.Resources.resources
+C:\GUI - פרוייקט סוף תואר - גרסה סופית\UserData\My Documents\Visual Studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\GUI - פרוייקט סוף תואר - גרסה סופית\UserData\My Documents\Visual Studio 2010\Projects\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\Braude\Project\part 2\Phase 2\Phase 2\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\Sem_Supervised_Sites_PartA-GUI.exe
+E:\Braude\Project\part 2\Phase 2\Phase 2\Sem_Supervised_Sites_PartA-GUI\Sem_Supervised_Sites_PartA-GUI\obj\x86\Debug\Sem_Supervised_Sites_PartA-GUI.pdb
