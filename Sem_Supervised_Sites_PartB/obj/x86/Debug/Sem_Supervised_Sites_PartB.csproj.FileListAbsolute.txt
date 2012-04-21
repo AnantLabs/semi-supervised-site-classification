@@ -1,0 +1,17 @@
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\obj\x86\Debug\Sem_Supervised_Sites_PartA-GUI.exe
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\obj\x86\Debug\Sem_Supervised_Sites_PartA-GUI.pdb
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\bin\Debug\Sem_Supervised_Sites_PartA-GUI.exe
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\bin\Debug\Sem_Supervised_Sites_PartA-GUI.pdb
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\bin\Debug\Accord.Math.dll
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\bin\Debug\AForge.Math.dll
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\bin\Debug\AForge.dll
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\bin\Debug\Accord.Math.pdb
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\obj\x86\Debug\Sem_Supervised_Sites_PartB.AddTopic.resources
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\obj\x86\Debug\Sem_Supervised_Sites_PartB.Form1.resources
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\obj\x86\Debug\Sem_Supervised_Sites_PartB.Form2.resources
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\obj\x86\Debug\Sem_Supervised_Sites_PartB.Form3.resources
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\obj\x86\Debug\Sem_Supervised_Sites_PartB.Form4.resources
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\obj\x86\Debug\Sem_Supervised_Sites_PartB.Properties.Resources.resources
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\Braude\Project\part 2\Semi-Supervised Sites - Phase B\obj\x86\Debug\GenerateResource.write.1.tlog
