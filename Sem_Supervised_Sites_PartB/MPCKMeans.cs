@@ -280,7 +280,7 @@ namespace Sem_Supervised_Sites_PartB
         }
 
         //calculate posible cannot link violation value per cluster
-        public double cannot_viol_compute(int this_clust, double[] xi, bool run)  ///Problem on 4'th vector
+        public double cannot_viol_compute(int this_clust, double[] xi, bool run)  
         {
             double cannot_viol = 0;
             //Cannot link per cluster contains all must link of other clusters
