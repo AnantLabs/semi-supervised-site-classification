@@ -310,7 +310,7 @@ namespace Sem_Supervised_Sites_PartB
             return fcRes;
         }
 
-        public double[] maxSepPoints(int this_clust) /* <--------- Problem here! returns 0*/
+        public double[] maxSepPoints(int this_clust)
         {
             double maxDist=0, tmpDist=0;
             double[] resSubPoints = new double[this.word_number];
