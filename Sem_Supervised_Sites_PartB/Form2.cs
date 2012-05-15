@@ -7,321 +7,67 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
-
+using Project_Phase_B___Engine_Stopwords;
+using Project_Phase_B___Engine_BagofWords;
+using PCA_Logic;
 
 namespace Sem_Supervised_Sites_PartB
 {
     public partial class Form2 : Panel
     {
+
+        
+        public struct siteClusterNode
+        {
+            public string name;
+            public string clusterName;
+        }
+        private siteClusterNode[] siteClusterNodeArray;
+
         public static Form2 SecStaticVar;
-        List<string> siteList_items = new List<string>();
+        public List<string> siteList_items = new List<string>();
         List<string> siteList_items_temp = new List<string>();
         List<string> supervised_siteList_items = new List<string>();
         List<string> supervised_siteList_items_temp = new List<string>();
+        List<string> SitesFileNamesList_StopWords = new List<string>();
+        string[] sitesFileNames;
+
+     //   public struct vectorNode
+      //  {
+      //      public double[] vector;
+       //     public string name;
+       // }
+        Sem_Supervised_Sites_PartB.Form1.vectorNode vectorNodetmp;
+        
+        Stopwords Stop;
+        public BagofWords Bag;
+        PCA Pca;
+
+        double[,] pca_result;
+        LinkedList<double[,]> mLC=new LinkedList<double[,]>();
+        List<double[,]> mLC_temp= new List<double[,]>();
+
+
         string filename;
         string filenametmp;
         bool is_site_added = false;
         int dimensions;
+        int pca_result_size;
+        int num_of_topics;
+        int numOfAdded;
+
+        int[] Supervised_Matrix_rows_per_Cluster;
+
         public Form2()
         {
-            //this.StartPosition = FormStartPosition.CenterScreen;
+            this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
             textBox1.ReadOnly = true;
             dataGridView1.AllowUserToAddRows = false;
             dataGridView2.AllowUserToAddRows = false;
             label5.Enabled = false;
             textBox2.Enabled = false;
-
-            
-            //siteList_items.Add("www.gamespot.com.txt");
-            //siteList_items.Add("www.nba.com.txt");
-            //siteList_items.Add("www.victoriassecret.com.txt");
-            //siteList_items.Add("www.espn.com.txt");
-            //siteList_items.Add("www.ftv.com.txt");
-            //siteList_items.Add("www.1up.com.txt");
-           // siteList_items.Add("www.vogue.com.txt");
-            //siteList_items.Add("www.sportsillustrated.co.za.txt");
-            //siteList_items.Add("www.ea.com.txt");
-            //siteList_items.Add("www.fifa.com.txt");
-
-            //listBox1.DataSource = siteList_items;
-
-
-            // **** DataGridViewRow2  ****
-
-/*            //-----------------1st line-------------------------
-            DataGridViewRow dataGridRow2_1 = new DataGridViewRow();
-            //  DataGridViewCell[] cells = new DataGridViewCell[2];
-            DataGridViewTextBoxCell txt2_1A = new DataGridViewTextBoxCell();
-            DataGridViewComboBoxCell cbo2_1 = new DataGridViewComboBoxCell();
-
-            cbo2_1.Items.Add("Computers");
-            cbo2_1.Items.Add("Sports");
-            cbo2_1.Items.Add("Fashion");
-
-
-            txt2_1A.Value = "www.vogue.com.txt";
-
-            dataGridRow2_1.Cells.Add(txt2_1A);
-            txt2_1A.ReadOnly = true;
-            dataGridRow2_1.Cells.Add(cbo2_1);
-            dataGridRow2_1.Height = 25;
-
-            dataGridView2.Rows.Add(dataGridRow2_1);
-
-
-            //-----------------2nd line-------------------------
-            DataGridViewRow dataGridRow2_2 = new DataGridViewRow();
-            //  DataGridViewCell[] cells = new DataGridViewCell[2];
-            DataGridViewTextBoxCell txt2_2A = new DataGridViewTextBoxCell();
-            DataGridViewComboBoxCell cbo2_2 = new DataGridViewComboBoxCell();
-
-            cbo2_2.Items.Add("Computers");
-            cbo2_2.Items.Add("Sports");
-            cbo2_2.Items.Add("Fashion");
-
-
-            txt2_2A.Value = "www.fashion.net.txt";
-
-            dataGridRow2_2.Cells.Add(txt2_2A);
-            txt2_2A.ReadOnly = true;
-            dataGridRow2_2.Cells.Add(cbo2_2);
-            dataGridRow2_2.Height = 25;
-
-            dataGridView2.Rows.Add(dataGridRow2_2);
-
-
-            //-----------------3rd line-------------------------
-            DataGridViewRow dataGridRow2_3 = new DataGridViewRow();
-            //  DataGridViewCell[] cells = new DataGridViewCell[2];
-            DataGridViewTextBoxCell txt2_3A = new DataGridViewTextBoxCell();
-            DataGridViewComboBoxCell cbo2_3 = new DataGridViewComboBoxCell();
-
-            cbo2_3.Items.Add("Computers");
-            cbo2_3.Items.Add("Sports");
-            cbo2_3.Items.Add("Fashion");
-
-
-            txt2_3A.Value = "www.ea.com.txt";
-
-            dataGridRow2_3.Cells.Add(txt2_3A);
-            txt2_3A.ReadOnly = true;
-            dataGridRow2_3.Cells.Add(cbo2_3);
-            dataGridRow2_3.Height = 25;
-
-            dataGridView2.Rows.Add(dataGridRow2_3);
-
-            //-----------------4th line-------------------------
-            DataGridViewRow dataGridRow2_4 = new DataGridViewRow();
-            //  DataGridViewCell[] cells = new DataGridViewCell[2];
-            DataGridViewTextBoxCell txt2_4A = new DataGridViewTextBoxCell();
-            DataGridViewComboBoxCell cbo2_4 = new DataGridViewComboBoxCell();
-
-            cbo2_4.Items.Add("Computers");
-            cbo2_4.Items.Add("Sports");
-            cbo2_4.Items.Add("Fashion");
-
-
-            txt2_4A.Value = "www.fifa.com.txt";
-
-            dataGridRow2_4.Cells.Add(txt2_4A);
-            txt2_4A.ReadOnly = true;
-            dataGridRow2_4.Cells.Add(cbo2_4);
-            dataGridRow2_4.Height = 25;
-
-            dataGridView2.Rows.Add(dataGridRow2_4);
-
-
-
-
-
-            // **** DataGridViewRow1  ****
-
-
-            //-----------------1st line-------------------------
-
-            DataGridViewRow dataGridRow = new DataGridViewRow();
-          //  DataGridViewCell[] cells = new DataGridViewCell[2];
-            DataGridViewTextBoxCell txt1A = new DataGridViewTextBoxCell();
-            DataGridViewComboBoxCell cbo1 = new DataGridViewComboBoxCell();
-
-            cbo1.Items.Add("Computers");
-            cbo1.Items.Add("Sports");
-            cbo1.Items.Add("Fashion");
-            
-
-            txt1A.Value = "www.gamespot.com.txt";
-           
-            dataGridRow.Cells.Add(txt1A);
-            txt1A.ReadOnly = true;
-            dataGridRow.Cells.Add(cbo1);
-            dataGridRow.Height = 25;
-          
-            dataGridView1.Rows.Add(dataGridRow);
-
-            //-----------------2nd line-------------------------
-
-
-            DataGridViewRow dataGridRow2 = new DataGridViewRow();
-            //  DataGridViewCell[] cells = new DataGridViewCell[2];
-            DataGridViewTextBoxCell txt2A = new DataGridViewTextBoxCell();
-            DataGridViewComboBoxCell cbo2 = new DataGridViewComboBoxCell();
-
-            cbo2.Items.Add("Computers");
-            cbo2.Items.Add("Sports");
-            cbo2.Items.Add("Fashion");
-
-
-            txt2A.Value = "www.nba.com.txt";
-
-            dataGridRow2.Cells.Add(txt2A);
-            txt2A.ReadOnly = true;
-            dataGridRow2.Cells.Add(cbo2);
-            dataGridRow2.Height = 25;
-
-            dataGridView1.Rows.Add(dataGridRow2);
-        //    dataGridView1.Rows.RemoveAt(3);
-
-         /*   //-----------------3rd line-------------------------
-
-
-            DataGridViewRow dataGridRow3 = new DataGridViewRow();
-            //  DataGridViewCell[] cells = new DataGridViewCell[2];
-            DataGridViewTextBoxCell txt3A = new DataGridViewTextBoxCell();
-            DataGridViewComboBoxCell cbo3 = new DataGridViewComboBoxCell();
-
-            cbo3.Items.Add("Computers");
-            cbo3.Items.Add("Sports");
-            cbo3.Items.Add("Fashion");
-
-
-            txt3A.Value = "www.espn.com.txt";
-
-            dataGridRow3.Cells.Add(txt3A);
-            txt3A.ReadOnly = true;
-            dataGridRow3.Cells.Add(cbo3);
-            dataGridRow3.Height = 25;
-
-            dataGridView1.Rows.Add(dataGridRow3);
-            */
-
-
-          //-----------------4th line-------------------------
-
-            /*
-            DataGridViewRow dataGridRow4 = new DataGridViewRow();
-            //  DataGridViewCell[] cells = new DataGridViewCell[2];
-            DataGridViewTextBoxCell txt4A = new DataGridViewTextBoxCell();
-            DataGridViewComboBoxCell cbo4 = new DataGridViewComboBoxCell();
-
-            cbo4.Items.Add("Computers");
-            cbo4.Items.Add("Sports");
-            cbo4.Items.Add("Fashion");
-
-
-            txt4A.Value = "www.victoriasecret.com.txt";
-
-            dataGridRow4.Cells.Add(txt4A);
-            txt4A.ReadOnly = true;
-            dataGridRow4.Cells.Add(cbo4);
-            dataGridRow4.Height = 25;
-
-            dataGridView1.Rows.Add(dataGridRow4);
-
-            
-          //-----------------5th line-------------------------
-
-
-            DataGridViewRow dataGridRow5 = new DataGridViewRow();
-            //  DataGridViewCell[] cells = new DataGridViewCell[2];
-            DataGridViewTextBoxCell txt5A = new DataGridViewTextBoxCell();
-            DataGridViewComboBoxCell cbo5 = new DataGridViewComboBoxCell();
-
-            cbo5.Items.Add("Computers");
-            cbo5.Items.Add("Sports");
-            cbo5.Items.Add("Fashion");
-
-
-            txt5A.Value = "www.ftv.com.txt";
-
-            dataGridRow5.Cells.Add(txt5A);
-            txt5A.ReadOnly = true;
-            dataGridRow5.Cells.Add(cbo5);
-            dataGridRow5.Height = 25;
-
-            dataGridView1.Rows.Add(dataGridRow5);
-
-
-            //-----------------6th line-------------------------
-
-
-            DataGridViewRow dataGridRow6 = new DataGridViewRow();
-            //  DataGridViewCell[] cells = new DataGridViewCell[2];
-            DataGridViewTextBoxCell txt6A = new DataGridViewTextBoxCell();
-            DataGridViewComboBoxCell cbo6 = new DataGridViewComboBoxCell();
-
-            cbo6.Items.Add("Computers");
-            cbo6.Items.Add("Sports");
-            cbo6.Items.Add("Fashion");
-
-
-            txt6A.Value = "www.1up.com.txt";
-
-            dataGridRow6.Cells.Add(txt6A);
-            txt6A.ReadOnly = true;
-            dataGridRow6.Cells.Add(cbo6);
-            dataGridRow6.Height = 25;
-
-            dataGridView1.Rows.Add(dataGridRow6);
-
-
-            //-----------------7th line-------------------------
-
-
-            DataGridViewRow dataGridRow7 = new DataGridViewRow();
-            //  DataGridViewCell[] cells = new DataGridViewCell[2];
-            DataGridViewTextBoxCell txt7A = new DataGridViewTextBoxCell();
-            DataGridViewComboBoxCell cbo7 = new DataGridViewComboBoxCell();
-
-            cbo7.Items.Add("Computers");
-            cbo7.Items.Add("Sports");
-            cbo7.Items.Add("Fashion");
-
-
-            txt7A.Value = "www.espn.com.txt";
-
-            dataGridRow7.Cells.Add(txt7A);
-            txt7A.ReadOnly = true;
-            dataGridRow7.Cells.Add(cbo7);
-            dataGridRow7.Height = 25;
-
-            dataGridView1.Rows.Add(dataGridRow7);
-
-            //-----------------8th line-------------------------
-
-
-            DataGridViewRow dataGridRow8 = new DataGridViewRow();
-            //  DataGridViewCell[] cells = new DataGridViewCell[2];
-            DataGridViewTextBoxCell txt8A = new DataGridViewTextBoxCell();
-            DataGridViewComboBoxCell cbo8 = new DataGridViewComboBoxCell();
-
-            cbo8.Items.Add("Computers");
-            cbo8.Items.Add("Sports");
-            cbo8.Items.Add("Fashion");
-
-
-            txt8A.Value = "www.victoriasecret.com.txt";
-
-            dataGridRow8.Cells.Add(txt8A);
-            txt8A.ReadOnly = true;
-            dataGridRow8.Cells.Add(cbo8);
-            dataGridRow8.Height = 25;
-
-            dataGridView1.Rows.Add(dataGridRow8);
-
-            */
-
-
+            numOfAdded = 0;
         }
         
         private void button2_Click(object sender, EventArgs e)
@@ -332,19 +78,40 @@ namespace Sem_Supervised_Sites_PartB
             openFileDialog.Multiselect = true;
             if (openFileDialog.ShowDialog(this) == DialogResult.OK)
             {
+  
                 foreach (string filenamepath in openFileDialog.FileNames)
                 {
+                    numOfAdded++;
                     string filename = Path.GetFileName(filenamepath);
  
                     if (!siteList_items.Contains(filename))
                     {
+                        StreamReader streamReader = new StreamReader(filenamepath);
+                        string text = streamReader.ReadToEnd();
+                        streamReader.Close();
+
+                        string[] tokens = filenamepath.Split('.');
+                        string savefile_new = tokens[0] + "_new.txt";
+
+                        using (StreamWriter outfile = new StreamWriter(savefile_new))
+                        {
+                            outfile.Write(Stop.CleanSearchedWords(text));
+                        }
+                        
                         siteList_items.Add(filename);
                         siteList_items_temp.Add(filename);
                         is_site_added = true;
+
+                        SitesFileNamesList_StopWords.Add(savefile_new);
+
                         
                     }
                 }
-
+                if (numOfAdded >= 2)
+                {
+                    this.button7.Enabled = true;
+                    this.button8.Enabled = true;
+                }
                 if (is_site_added)
                 {
                     //int NumOfItems = siteList_items.Count();
@@ -382,26 +149,6 @@ namespace Sem_Supervised_Sites_PartB
                 is_site_added = false;
                 //siteList_items.Clear();
                 siteList_items_temp.Clear();
-
-               /* DataGridViewRow dataGridRow2_1 = new DataGridViewRow();
-                    //  DataGridViewCell[] cells = new DataGridViewCell[2];
-                    DataGridViewTextBoxCell txt2_1A = new DataGridViewTextBoxCell();
-                    DataGridViewComboBoxCell cbo2_1 = new DataGridViewComboBoxCell();
-
-                    cbo2_1.Items.Add("Computers");
-                    cbo2_1.Items.Add("Sports");
-                    cbo2_1.Items.Add("Fashion");
-
-
-                    txt2_1A.Value = "www.vogue.com.txt";
-
-                    dataGridRow2_1.Cells.Add(txt2_1A);
-                    txt2_1A.ReadOnly = true;
-                    dataGridRow2_1.Cells.Add(cbo2_1);
-                    dataGridRow2_1.Height = 25;
-
-                    dataGridView2.Rows.Add(dataGridRow2_1);
-                */
  
             }
         }
@@ -413,6 +160,7 @@ namespace Sem_Supervised_Sites_PartB
 
         private void button7_Click(object sender, EventArgs e)
         {
+            this.button5.Enabled = true;
             foreach (DataGridViewCell cell in dataGridView2.SelectedCells)
             {
                 siteList_items.RemoveAt(cell.RowIndex);
@@ -423,7 +171,7 @@ namespace Sem_Supervised_Sites_PartB
                 string filename = dataGrid1NewRow.Cells[0].Value.ToString();
                 supervised_siteList_items.Add(filename);
             }
-
+           
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -461,10 +209,266 @@ namespace Sem_Supervised_Sites_PartB
 
         }
 
+
+        private void setSiteClusterNodeArray()
+        {
+            int index = 0;
+            bool found_in_datagridview2 = false;
+
+            foreach (string s in SitesFileNamesList_StopWords)
+            {
+                foreach (DataGridViewRow row in dataGridView2.Rows)
+                {
+                    string sitename = row.Cells[0].Value.ToString();
+
+                    string[] tokens = sitename.Split('.');
+
+                    //if (s.Contains(row.Cells[0].Value.ToString()))
+                    if (s.Contains(tokens[0]))
+                    {
+                        siteClusterNodeArray[index].name = row.Cells[0].Value.ToString();
+                        siteClusterNodeArray[index].clusterName = row.Cells[1].Value.ToString();
+                        found_in_datagridview2 = true;
+                    }
+
+                }
+
+                if (!found_in_datagridview2)
+                {
+                    foreach (DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        string sitename = row.Cells[0].Value.ToString();
+
+                        string[] tokens = sitename.Split('.');
+
+                        //if (s.Contains(row.Cells[0].Value.ToString()))
+                        if (s.Contains(tokens[0]))
+                        {
+                            siteClusterNodeArray[index].name = row.Cells[0].Value.ToString();
+                            siteClusterNodeArray[index].clusterName = row.Cells[1].Value.ToString();
+                        }
+
+                    }
+
+                }
+                index++;
+                found_in_datagridview2 = false;
+            }
+        }
+
+        public void setSitesFileNames()
+        {
+            sitesFileNames = new string[SitesFileNamesList_StopWords.Count()];
+
+            int index_s = 0;
+            foreach (string s in SitesFileNamesList_StopWords)
+            {
+                sitesFileNames[index_s++] = s;
+            }
+
+        }
+
+        private void runBOW_PCA()
+        {
+            Bag = new BagofWords(sitesFileNames);
+
+            Bag.setSitesFreqVector();
+
+            if (checkBox1.Checked == true) // if the enable PCA was checked
+            {
+                Pca = new PCA(Bag.getSitesFreqVector(), dimensions);
+                Pca.compute();
+                pca_result = Pca.Result;
+                pca_result_size = dimensions;
+            }
+            else
+            {
+                pca_result = Bag.getSitesFreqVector();
+                pca_result_size = Bag.getNumOfWordsInDictionary();
+            }
+
+        }
+
+        private void setRelatedPointsInEachCluster()
+        {
+            int numOfSites = SitesFileNamesList_StopWords.Count();
+            this.num_of_topics = Form1.FirStaticVar.getNumOfTopics();
+
+            for (int i = 0; i < this.num_of_topics; i++)    // <------------------- BUG ! - Not entering here
+            {
+                for (int j = 0; j < numOfSites; j++)
+                {
+                    if (Form1.FirStaticVar.tmpCluster[i].clusterName.Equals(siteClusterNodeArray[j].clusterName))
+                    {
+                        vectorNodetmp = new Sem_Supervised_Sites_PartB.Form1.vectorNode();
+                        vectorNodetmp.name = siteClusterNodeArray[j].name;
+                        vectorNodetmp.vector = new double[pca_result_size];
+
+                        for (int k = 0; k < pca_result_size; k++)
+                        {
+                            vectorNodetmp.vector[k] = pca_result[j, k];
+                        }
+
+                        Form1.FirStaticVar.tmpCluster[i].relatedPoints.AddFirst(vectorNodetmp);
+                    }
+
+                }
+            }
+
+        }
+
+
+        private void set_Supervised_Matrix_rows_per_Cluster()
+        {
+            Supervised_Matrix_rows_per_Cluster = new int[num_of_topics];
+
+            for (int i = 0; i < num_of_topics; i++)
+                Supervised_Matrix_rows_per_Cluster[i] = 0;
+
+        }
+
+        private void count_Supervised_Sites_For_Each_Cluster()
+        {
+            // to count how many supervised site are in each cluster
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                int index_for_compatible_cluster;
+
+                string cluster_name = row.Cells[1].Value.ToString();
+                index_for_compatible_cluster = Form1.FirStaticVar.dictionary_ClusterNameToValue_KeyToVal(cluster_name);
+                Form1.FirStaticVar.tmpCluster[index_for_compatible_cluster].SupervisedCounter++;
+
+            }
+
+
+        }
+
+
+        // sets the matrix of supervised sites x Words ( dictionary or after PCA ) for each compatible cluster
+        private void set_mLC_temp()
+        {
+
+            for (int i = 0; i < num_of_topics; i++)
+            {
+                int matrix_rows = Form1.FirStaticVar.tmpCluster[i].SupervisedCounter;
+                int matrix_cols = pca_result_size;
+
+                double[,] matrix = new double[matrix_rows, matrix_cols];
+
+                for (int j = 0; j < matrix_rows; j++)
+                {
+                    for (int k = 0; k < matrix_cols; k++)
+                    {
+                        matrix[j, k] = 0;
+                    }
+
+                }
+                // mLC_temp[i] = new double[matrix_rows, matrix_cols];
+                //mLC_temp[i] = matrix;
+                mLC_temp.Add(matrix);
+                //mLC.AddLast(matrix);
+
+            }
+
+
+        }
+
+        // to set the vector matrix for each cluster to the mlc ( Must-Link Constraint )
+        private void set_Vector_Matrix_For_Each_Cluster_To_MLC()
+        {
+            
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                int index_for_compatible_cluster;
+
+                string site_name = row.Cells[0].Value.ToString();
+                //string[] tokens = site_name.Split('.');
+                string cluster_name = row.Cells[1].Value.ToString();
+
+                index_for_compatible_cluster = Form1.FirStaticVar.dictionary_ClusterNameToValue_KeyToVal(cluster_name);
+
+                LinkedList<Sem_Supervised_Sites_PartB.Form1.vectorNode> cluster_related_points = Form1.FirStaticVar.tmpCluster[index_for_compatible_cluster].relatedPoints;
+
+                foreach (Sem_Supervised_Sites_PartB.Form1.vectorNode vectorNodetmp_for_supervised in cluster_related_points)
+                {
+                    if (vectorNodetmp_for_supervised.name.Equals(site_name))
+                    {
+                        double[,] matrix_tmp = mLC_temp[index_for_compatible_cluster];
+
+                        int i = Supervised_Matrix_rows_per_Cluster[index_for_compatible_cluster];
+
+                        for (int j = 0; j < pca_result_size; j++)
+                        {
+                            matrix_tmp[i, j] = vectorNodetmp_for_supervised.vector[j];
+                        }
+                        Supervised_Matrix_rows_per_Cluster[index_for_compatible_cluster]++;
+                        mLC_temp[index_for_compatible_cluster] = matrix_tmp;
+                    }
+
+                }
+                //Sem_Supervised_Sites_PartB.Form1.vectorNode vectorNodetmp;
+            }
+
+            for (int i = 0; i < num_of_topics; i++)
+                mLC.AddLast(mLC_temp[i]);
+
+        }
+
+
+     //   private void GUI3_Presentation()
+     //   {
+            
+
+     //   }
+
         private void button5_Click(object sender, EventArgs e)
         {
+
+            int numOfSites=SitesFileNamesList_StopWords.Count();
+            siteClusterNodeArray = new siteClusterNode[numOfSites];
+            
+            setSiteClusterNodeArray();
+            setSitesFileNames();
+            runBOW_PCA();
+            setRelatedPointsInEachCluster();
+                      
+            set_Supervised_Matrix_rows_per_Cluster();
+
+            count_Supervised_Sites_For_Each_Cluster();
+
+            set_mLC_temp();
+
+            set_Vector_Matrix_For_Each_Cluster_To_MLC();
+           
+
+
+            Tools.num_of_words_in_dictionary = Bag.getNumOfWordsInDictionary();
+            Tools.words_in_dictionary = Bag.getWordInDictionary();
+            
+            Tools.mLC = this.mLC;
+            Tools.pca_result = this.pca_result;
+
+
+            ////////// Need to do the presentation of GUI 3 !!!!!!!!
+            
+            //Form1.FirStaticVar.panel3.dataGridView1
+
+            Form1.StatPanel3 = Form1.FirStaticVar.panel3;
+
             Form1.StatPanel3.Show();
             Form1.StatPanel3.BringToFront();
+
+
+
+       //     GUI3_Presentation();
+           
+            
+            
+
+        /*  this.Hide();
+            if (Form3.ThirStaticVar == null)
+                Form3.ThirStaticVar = new Form3();
+            Form3.ThirStaticVar.Show(); */
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -509,7 +513,11 @@ namespace Sem_Supervised_Sites_PartB
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Form1.StatPanel2.Hide();
+            siteList_items.Clear();
+            this.dataGridView1.Rows.Clear();
+            this.dataGridView2.Rows.Clear();
+            this.Hide();
+            Form1.FirStaticVar.Show();
         }
 
 
@@ -525,7 +533,10 @@ namespace Sem_Supervised_Sites_PartB
             openFileDialog.Title = "Type File";
             if (openFileDialog.ShowDialog(this) == DialogResult.OK)
             {
+                this.button2.Enabled = true;
                 filename = openFileDialog.FileName;
+                Stop = new Stopwords(filename);
+
                 filenametmp = filename;
                 filenametmp.Replace(@"\\", @"\");
                 textBox1.Text = filenametmp;
@@ -544,9 +555,25 @@ namespace Sem_Supervised_Sites_PartB
 
             foreach (DataGridViewCell cell in dataGridView2.SelectedCells)
             {
+
+                DataGridViewRow dataGrid2NewRow = new DataGridViewRow();
+                dataGrid2NewRow = dataGridView2.Rows[cell.RowIndex];
+                string dataGrid2NewRow_string_value = dataGrid2NewRow.Cells[0].Value.ToString();
+
+                for (int i = 0; i < SitesFileNamesList_StopWords.Count(); i++)
+                {
+                    if ( SitesFileNamesList_StopWords[i].Contains(dataGrid2NewRow_string_value) )
+                    {
+                        SitesFileNamesList_StopWords.RemoveAt(i);
+                        break;
+                    }
+                }
+
                 //var row = dataGridView1.Rows[cell.RowNumber];
                 siteList_items.RemoveAt(cell.RowIndex);
+                // SitesFileNamesList_StopWords.RemoveAt(cell.RowIndex);
                 dataGridView2.Rows.Remove(dataGridView2.Rows[cell.RowIndex]);
+                
                 
 
             }
@@ -564,6 +591,20 @@ namespace Sem_Supervised_Sites_PartB
         
         private void button4_Click(object sender, EventArgs e)
         {
+            foreach (string s in siteList_items)
+            {
+                bool finish = false;
+                for (int i = 0; i < SitesFileNamesList_StopWords.Count() && !finish ; i++)
+                {
+                    if (SitesFileNamesList_StopWords[i].Contains(s))
+                    {
+                        SitesFileNamesList_StopWords.RemoveAt(i);
+                        finish = true;
+                    }
+                }
+            }
+
+
             siteList_items.Clear();
             dataGridView2.Rows.Clear();
         }
@@ -591,9 +632,22 @@ namespace Sem_Supervised_Sites_PartB
             return dimensions;
         }
 
-        private void label11_Click(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
+
+        public FormStartPosition StartPosition { get; set; }
+
+        public BagofWords getBOWinstance()
+        {
+            return Bag;
+        }
+
+        public void  UpdateGUI2()
+        {
+            // Update Data Here
+        }
+
     }
 }

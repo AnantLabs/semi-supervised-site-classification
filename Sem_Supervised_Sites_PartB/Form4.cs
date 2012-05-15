@@ -30,10 +30,6 @@ namespace Sem_Supervised_Sites_PartB
             public string clusterName;
         }
 
-
-        private tmpClust[] tmpCluster;
-        //remove that crap after
-
         private int clustNum;
 
         public static Form4 FourStaticVar;
@@ -48,57 +44,13 @@ namespace Sem_Supervised_Sites_PartB
             InitializeComponent();
 
             string k;
+            int index;
 
-
-            //remove that crap after
-            double[] vec0 = new double[2] { -4, 3 };
-            double[] vec1 = new double[2] { -3, 4 };
-            double[] vec2 = new double[2] { 2, -1 };
-            double[] vec3 = new double[2] { -3, 1 };
-            double[] vec4 = new double[2] { 4, -2 };
-
-
-            tmpCluster = new tmpClust[2];
-
-            tmpCluster[0].clusterName = "Cluster 0";
-            tmpCluster[0].relatedPoints = new LinkedList<vectorNode>();
-            tmpCluster[1].clusterName = "Cluster 1";
-            tmpCluster[1].relatedPoints = new LinkedList<vectorNode>();
-            vectorNode tmpVector0 = new vectorNode();
-            tmpVector0.name = "site 0";
-            tmpVector0.vector = vec0;
-
-            vectorNode tmpVector1 = new vectorNode();
-            tmpVector1.name = "site 1";
-            tmpVector1.vector = vec1;
-
-            vectorNode tmpVector3 = new vectorNode();
-            tmpVector3.name = "site 3";
-            tmpVector3.vector = vec3;
-
-            tmpCluster[0].relatedPoints.AddFirst(tmpVector0);
-            tmpCluster[0].relatedPoints.AddFirst(tmpVector1);
-            
-            //tmpCluster[0].relatedPoints.AddFirst(tmpVector3);
-
-            vectorNode tmpVector2 = new vectorNode();
-            tmpVector2.name = "site 2";
-            tmpVector2.vector = vec2;
-            vectorNode tmpVector4 = new vectorNode();
-            tmpVector4.name = "site 4";
-            tmpVector4.vector = vec4;
-            tmpCluster[1].relatedPoints.AddFirst(tmpVector2);
-            tmpCluster[1].relatedPoints.AddFirst(tmpVector4);
-            
-            tmpCluster[1].relatedPoints.AddFirst(tmpVector3);
-
-
-
-            //remove that crap after    
             //Create chart
             foreach (string key in dic.Keys.ToList())
             {
-                k = "Cluster " + key;
+                Int32.TryParse(key,out index);
+                k = "Cluster: " + Form1.FirStaticVar.tmpCluster[index].clusterName;
                 chart1.Series.Add(k).ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
                 foreach (double[] temp in dic[key])
                 {
@@ -131,20 +83,20 @@ namespace Sem_Supervised_Sites_PartB
                     //find temp[] in tmpCluster[p].relatedPoints. Print p and name
                     for (int p = 0; p < clustNum; p++)
                     {
-                        foreach (vectorNode tempVectorNode in tmpCluster[p].relatedPoints)
+                        foreach (Sem_Supervised_Sites_PartB.Form1.vectorNode tempVectorNode in Form1.FirStaticVar.tmpCluster[p].relatedPoints)
                             if (Tools.Equals(temp, tempVectorNode.vector))
                             {
-                                userAsign.Value = tmpCluster[p].clusterName;
+                                userAsign.Value = Form1.FirStaticVar.tmpCluster[p].clusterName;
                                 siteName.Value = tempVectorNode.name;
                             }
                     }
-                    clustRes.Value = tmpCluster[Convert.ToInt32(key)].clusterName;
+                    clustRes.Value = Form1.FirStaticVar.tmpCluster[Convert.ToInt32(key)].clusterName;
 
-
+                    userAsign.Selected = false;
                     dataGridRow.Cells.Add(userAsign);
                     dataGridRow.Cells.Add(clustRes);
                     dataGridRow.Cells.Add(siteName);
-
+                
                     userAsign.ReadOnly = true;
                     clustRes.ReadOnly = true;
                     siteName.ReadOnly = true;
@@ -189,8 +141,9 @@ namespace Sem_Supervised_Sites_PartB
 
         private void button6_Click(object sender, EventArgs e)
         {
-            //this.Close();
-            //Form3.ThirStaticVar.Show();
+            this.Close();
+            Form1.StatPanel3.Show();
+            Form1.StatPanel3.BringToFront();
         }
 
         private void button1_Click(object sender, EventArgs e)

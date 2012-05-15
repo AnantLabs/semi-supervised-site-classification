@@ -34,6 +34,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.shapeContainer1 = new Microsoft.VisualBasic.PowerPacks.ShapeContainer();
             this.lineShape4 = new Microsoft.VisualBasic.PowerPacks.LineShape();
@@ -67,7 +68,6 @@
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.vScrollBar1 = new System.Windows.Forms.VScrollBar();
-            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -82,7 +82,6 @@
             this.label11.Size = new System.Drawing.Size(108, 20);
             this.label11.TabIndex = 24;
             this.label11.Text = "Bag-of-Words";
-            this.label11.Click += new System.EventHandler(this.label11_Click);
             // 
             // label10
             // 
@@ -116,6 +115,17 @@
             this.label8.Size = new System.Drawing.Size(64, 20);
             this.label8.TabIndex = 21;
             this.label8.Text = "Step 2 :";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.label7.Location = new System.Drawing.Point(8, 33);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(104, 24);
+            this.label7.TabIndex = 20;
+            this.label7.Text = "Initialization";
             // 
             // label6
             // 
@@ -239,6 +249,7 @@
             this.button2.Text = "Add Site";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Enabled = false;
             // 
             // button3
             // 
@@ -272,6 +283,7 @@
             this.button5.Text = "Next";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.button5.Enabled = false;
             // 
             // button6
             // 
@@ -294,6 +306,7 @@
             this.button7.Text = "->";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.button7.Enabled = false;
             // 
             // button8
             // 
@@ -305,6 +318,7 @@
             this.button8.Text = "<-";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
+            this.button8.Enabled = false;
             // 
             // dataGridView1
             // 
@@ -392,6 +406,7 @@
             this.label5.Size = new System.Drawing.Size(120, 18);
             this.label5.TabIndex = 43;
             this.label5.Text = "# of Dimensions:";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // vScrollBar2
             // 
@@ -453,19 +468,10 @@
             this.vScrollBar1.Size = new System.Drawing.Size(22, 264);
             this.vScrollBar1.TabIndex = 51;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.label7.Location = new System.Drawing.Point(8, 33);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(104, 24);
-            this.label7.TabIndex = 20;
-            this.label7.Text = "Initialization";
-            // 
             // Form2
             // 
+            //this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            //this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1095, 573);
             this.Controls.Add(this.vScrollBar1);
             this.Controls.Add(this.dataGridView2);
@@ -497,6 +503,7 @@
             this.Controls.Add(this.shapeContainer1);
             this.Name = "Form2";
             this.Text = "Semi-Supervised Classification of Sites";
+            //this.Load += new System.EventHandler(this.Form2_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
@@ -510,6 +517,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private Microsoft.VisualBasic.PowerPacks.ShapeContainer shapeContainer1;
         private System.Windows.Forms.Label label1;
@@ -523,7 +531,7 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        public System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewComboBoxColumn Column2;
         private System.Windows.Forms.Label label3;
@@ -539,11 +547,16 @@
         private Microsoft.VisualBasic.PowerPacks.RectangleShape rectangleShape1;
         private Microsoft.VisualBasic.PowerPacks.LineShape lineShape4;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        public System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn1;
         private System.Windows.Forms.VScrollBar vScrollBar1;
-        private System.Windows.Forms.Label label7;
 
+
+        public System.Drawing.SizeF AutoScaleDimensions { get; set; }
+
+        public System.Windows.Forms.AutoScaleMode AutoScaleMode { get; set; }
+
+        public System.EventHandler Load { get; set; }
     }
 }

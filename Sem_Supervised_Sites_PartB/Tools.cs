@@ -20,6 +20,12 @@ namespace Sem_Supervised_Sites_PartB
     /// 
     public static class Tools
     {
+        //public static Dictionary<string, int> dictionary;
+        public static int num_of_words_in_dictionary;
+        public static string[] words_in_dictionary;
+
+        public static LinkedList<double[,]> mLC;
+        public static double[,] pca_result;
 
         //***************//
 
@@ -65,7 +71,7 @@ namespace Sem_Supervised_Sites_PartB
         //find min index of array
         public static int MinIndex(double[] temp)
         {
-            int min = -1;
+            int min = 0;
             double tmp_val = 999;
             for (int i = 0; i < temp.Length; i++)
                 if (temp[i] < tmp_val)
@@ -244,5 +250,7 @@ namespace Sem_Supervised_Sites_PartB
         #endregion
 
         //***************//
+
+        
     }
 }

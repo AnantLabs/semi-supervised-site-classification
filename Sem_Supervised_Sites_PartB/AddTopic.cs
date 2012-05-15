@@ -23,6 +23,9 @@ namespace Sem_Supervised_Sites_PartB
         {
             Form1.FirStaticVar.AddtoListBox1(Added_Topic);
             Form1.FirStaticVar.Enabled = true;
+            Form1.FirStaticVar.topicAdd = true;
+            if (Form1.FirStaticVar.topicAdd && Form1.FirStaticVar.mustViolAdd && Form1.FirStaticVar.cannotViolAdd)
+                Form1.FirStaticVar.button3.Enabled = true;
             this.Hide();
             
         }

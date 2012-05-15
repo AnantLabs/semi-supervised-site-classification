@@ -40,7 +40,7 @@ namespace Sem_Supervised_Sites_PartB
             this.mustViolation = mViol;
             this.cannotViolation = cViol;
             this.clust = new cluster[clust_num];
-            this.mustLinkConstraints=mLC;
+            this.mustLinkConstraints = new LinkedList<double[,]>(mLC);
            
             word_number=matrix.GetLength(1);
             
@@ -70,7 +70,7 @@ namespace Sem_Supervised_Sites_PartB
                 this.clust[i].relatedPoints = tmpRelatedlist;
                 
                 //build must linked list per cluster
-                temp = this.mustLinkConstraints.Last.Value;
+                temp = this.mustLinkConstraints.First.Value;
                 //number of sites in each must link (2 by default)
                 for (int b = 0; b < temp.GetLength(0); b++)
                 {
@@ -86,7 +86,7 @@ namespace Sem_Supervised_Sites_PartB
  
                 //update centroids for the first time
                 this.clust[i].clusterCentroid = Tools.updateCentroid(temp); 
-                this.mustLinkConstraints.RemoveLast();
+                this.mustLinkConstraints.RemoveFirst();
             }
 
             //Update cannot link per cluster with all must link of other clusters
@@ -96,17 +96,10 @@ namespace Sem_Supervised_Sites_PartB
                         foreach (double[] t in this.clust[n].localMustLink)
                             this.clust[m].localCannotLink.AddFirst(t);
             
-            for (int i = 0; i < this.clusterNumber; i++)
-                for (int j = 0; j < this.clust[i].clusterCentroid.GetLength(0); j++)
-                    Console.WriteLine("Clust: " + i + " centr is is:" + this.clust[i].clusterCentroid[j]);
-            Console.ReadLine();
+
             //begin iterative steps of algorithm
             iterativeSteps();
 
-            for (int i = 0; i < this.clusterNumber; i++)
-                for (int j = 0; j < this.clust[i].clusterCentroid.GetLength(0); j++)
-                    Console.WriteLine("Clust: " + i + " centr is is:" + this.clust[i].clusterCentroid[j]);
-            Console.ReadLine();
         }
 
         #endregion
@@ -124,13 +117,12 @@ namespace Sem_Supervised_Sites_PartB
                 updateMetrics();
                 max_itter--;
             }
-            //Here send to print all vectors. 
-            //For i=0:clust_num 
-                //SendToPrint(clust[i].relatedPoints) <-- linked list
+            
         }
 
         public int assignCluster()
         {
+            bool not_first_run=false;
             int converge = 1;
             double[] obj_func = new double [this.clusterNumber];
             int min_clust;
@@ -154,17 +146,11 @@ namespace Sem_Supervised_Sites_PartB
 
                     double must_viol =  must_viol_compute(i,t);
 
-                    double cannot_viol =  cannot_viol_compute(i,t);
+                    double cannot_viol =  cannot_viol_compute(i,t, not_first_run); 
 
-                    //obj_func[i] = multVecCentrA - logDetA + must_viol + cannot_viol;
-
-                    obj_func[i] = multVecCentrA - logDetA;
-                    Console.WriteLine("Obj Func Without constraints: " + obj_func[i]);
-                    
-                    obj_func[i] += must_viol + cannot_viol;
-                    Console.WriteLine("Obj Func With constraints: " + obj_func[i]);
+                    obj_func[i] = multVecCentrA - logDetA + must_viol + cannot_viol;
                 }
-                Console.WriteLine("\n");
+                
                 min_clust= Tools.MinIndex(obj_func);
                 //go to this.clust[min_clust] and check if vector t in there, if it is, converge=0,quit
                 //if is not, remove from old cluster, add to optimal cluster, converge=1.
@@ -184,6 +170,7 @@ namespace Sem_Supervised_Sites_PartB
                  }
 
             }
+            not_first_run = true;
             return converge;
         }
 
@@ -254,7 +241,7 @@ namespace Sem_Supervised_Sites_PartB
                 //final multiply by point number in cluster
                 resA = Tools.Add_Sub(resA, mustViol,1);
                 resA = Tools.Add_Sub(resA, cannotViol,1);
-                resA = Accord.Math.Matrix.Inverse(resA);
+                //resA = Accord.Math.Matrix.Inverse(resA);
                 resA = Tools.Multiply(resA, this.clust[i].relatedPoints.Count);
                 this.clust[i].learningMatrix = resA;
             }
@@ -293,7 +280,7 @@ namespace Sem_Supervised_Sites_PartB
         }
 
         //calculate posible cannot link violation value per cluster
-        public double cannot_viol_compute(int this_clust, double[] xi)
+        public double cannot_viol_compute(int this_clust, double[] xi, bool run)  ///Problem on 4'th vector
         {
             double cannot_viol = 0;
             //Cannot link per cluster contains all must link of other clusters
@@ -303,21 +290,27 @@ namespace Sem_Supervised_Sites_PartB
                     foreach (double[] xj in clust[this_clust].localCannotLink)
                         if (!(Tools.Equals(xj, xi)))
                             cannot_viol += this.cannotViolation * 
-                                fc(xi, xj, clust[this_clust].learningMatrix, this_clust);
+                                fc(xi, xj, clust[this_clust].learningMatrix, this_clust, run);
             return cannot_viol;
         }
 
-        public double fc(double[] xi, double[] xj, double[,] Ai, int this_clust)
+        public double fc(double[] xi, double[] xj, double[,] Ai, int this_clust, bool not_first_run)
         {
             double fcRes = 0;
+            double temp;
+            double temp2;
             double[] subVecXiXj = Tools.Subtract(xi, xj);
             double[] maxSepPoint = maxSepPoints(this_clust);
-            fcRes = Math.Sqrt(Tools.Multiply_vec_sc(Tools.MultiplyVecMatr(maxSepPoint, Ai), maxSepPoint));
-            fcRes = fcRes - Math.Sqrt(Tools.Multiply_vec_sc(Tools.MultiplyVecMatr(subVecXiXj, Ai), subVecXiXj));
+            temp = Math.Sqrt(Tools.Multiply_vec_sc(Tools.MultiplyVecMatr(maxSepPoint, Ai), maxSepPoint));
+            temp2=Math.Sqrt(Tools.Multiply_vec_sc(Tools.MultiplyVecMatr(subVecXiXj, Ai), subVecXiXj));
+            if (not_first_run)
+                fcRes = temp - temp2;
+            else
+                fcRes = temp2;
             return fcRes;
         }
 
-        public double[] maxSepPoints(int this_clust)
+        public double[] maxSepPoints(int this_clust) /* <--------- Problem here! returns 0*/
         {
             double maxDist=0, tmpDist=0;
             double[] resSubPoints = new double[this.word_number];

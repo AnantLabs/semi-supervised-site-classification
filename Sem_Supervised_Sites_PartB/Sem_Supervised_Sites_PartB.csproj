@@ -55,6 +55,7 @@
     <Compile Include="AddTopic.Designer.cs">
       <DependentUpon>AddTopic.cs</DependentUpon>
     </Compile>
+    <Compile Include="BagOfWords.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,8 +81,10 @@
       <DependentUpon>Form4.cs</DependentUpon>
     </Compile>
     <Compile Include="MPCKMeans.cs" />
+    <Compile Include="PCA.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stopwords.cs" />
     <Compile Include="Tools.cs" />
     <EmbeddedResource Include="AddTopic.resx">
       <DependentUpon>AddTopic.cs</DependentUpon>

@@ -7,11 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Sem_Supervised_Sites_PartB;
+using Project_Phase_B___Engine_Stopwords;
+using Project_Phase_B___Engine_BagofWords;
+using PCA_Logic;
 
 namespace Sem_Supervised_Sites_PartB
 {
     public partial class Form3 : Panel
     {
+
+        int num_of_words_in_dictionary;
+        string[] words_in_dictionary;
+        BagofWords Bag_Gui3;
+        
 
         public static DateTime date1;
 
@@ -75,108 +83,36 @@ namespace Sem_Supervised_Sites_PartB
             listBox7.DataSource = _items7;
             listBox7.ClearSelected();
 
-
-            //-----------------1st line-------------------------
-
-            DataGridViewRow dataGridRow = new DataGridViewRow();
-            //  DataGridViewCell[] cells = new DataGridViewCell[2];
-            DataGridViewTextBoxCell txt1A_i1 = new DataGridViewTextBoxCell();
-            DataGridViewTextBoxCell txt1A = new DataGridViewTextBoxCell();
-
-            txt1A_i1.Value = "1";
-            txt1A.Value = "sport";
-
-            dataGridRow.Cells.Add(txt1A_i1);
-            txt1A_i1.ReadOnly = true;
-            dataGridRow.Cells.Add(txt1A);
-            txt1A.ReadOnly = true;
-       
-            dataGridRow.Height = 25;
-
             
 
-            dataGridView1.Rows.Add(dataGridRow);
+            // Dictionary Table
 
-            //-----------------2nd line-------------------------
+            this.num_of_words_in_dictionary = Tools.num_of_words_in_dictionary;
+            this.words_in_dictionary = Tools.words_in_dictionary;
 
-            DataGridViewRow dataGridRow2 = new DataGridViewRow();
-            //  DataGridViewCell[] cells = new DataGridViewCell[2];
-            DataGridViewTextBoxCell txt2A_i2 = new DataGridViewTextBoxCell();
-            DataGridViewTextBoxCell txt2A = new DataGridViewTextBoxCell();
+            for (int i = 0; i < this.num_of_words_in_dictionary; i++)
+            {
+                DataGridViewRow dataGridRow = new DataGridViewRow();
+                DataGridViewTextBoxCell txt1A_i1 = new DataGridViewTextBoxCell();
+                DataGridViewTextBoxCell txt1A = new DataGridViewTextBoxCell();
 
-            txt2A_i2.Value = "2";
-            txt2A.Value = "computer";
+                txt1A_i1.Value = i+1;
+                txt1A.Value = words_in_dictionary[i];
 
-            dataGridRow2.Cells.Add(txt2A_i2);
-            txt2A_i2.ReadOnly = true;
+                dataGridRow.Cells.Add(txt1A_i1);
+                txt1A_i1.ReadOnly = true;
+                dataGridRow.Cells.Add(txt1A);
+                txt1A.ReadOnly = true;
 
-            dataGridRow2.Cells.Add(txt2A);
-            txt2A.ReadOnly = true;
+                dataGridRow.Height = 25;
 
-            dataGridRow2.Height = 25;
 
-            dataGridView1.Rows.Add(dataGridRow2);
 
-            //-----------------3rd line-------------------------
+                dataGridView1.Rows.Add(dataGridRow);
 
-            DataGridViewRow dataGridRow3 = new DataGridViewRow();
-            //  DataGridViewCell[] cells = new DataGridViewCell[2];
-            DataGridViewTextBoxCell txt3A_i3 = new DataGridViewTextBoxCell();
-            DataGridViewTextBoxCell txt3A = new DataGridViewTextBoxCell();
+            }
 
-            txt3A_i3.Value = "3";
-            txt3A.Value = "fashion";
-
-            dataGridRow3.Cells.Add(txt3A_i3);
-            txt3A_i3.ReadOnly = true;
-
-            dataGridRow3.Cells.Add(txt3A);
-            txt3A.ReadOnly = true;
-
-            dataGridRow3.Height = 25;
-
-            dataGridView1.Rows.Add(dataGridRow3);
-
-            //-----------------4th line-------------------------
-
-            DataGridViewRow dataGridRow4 = new DataGridViewRow();
-            //  DataGridViewCell[] cells = new DataGridViewCell[2];
-            DataGridViewTextBoxCell txt4A_i4 = new DataGridViewTextBoxCell();
-            DataGridViewTextBoxCell txt4A = new DataGridViewTextBoxCell();
-
-            txt4A_i4.Value = "4";
-            txt4A.Value = "team";
-
-            dataGridRow4.Cells.Add(txt4A_i4);
-            txt4A_i4.ReadOnly = true;
-
-            dataGridRow4.Cells.Add(txt4A);
-            txt4A.ReadOnly = true;
-
-            dataGridRow4.Height = 25;
-
-            dataGridView1.Rows.Add(dataGridRow4);
-
-            //-----------------5th line-------------------------
-
-            DataGridViewRow dataGridRow5 = new DataGridViewRow();
-            //  DataGridViewCell[] cells = new DataGridViewCell[2];
-            DataGridViewTextBoxCell txt5A_i5 = new DataGridViewTextBoxCell();
-            DataGridViewTextBoxCell txt5A = new DataGridViewTextBoxCell();
-
-            txt5A_i5.Value = "5";
-            txt5A.Value = "designer";
-
-            dataGridRow5.Cells.Add(txt5A_i5);
-            txt5A_i5.ReadOnly = true;
-
-            dataGridRow5.Cells.Add(txt5A);
-            txt5A.ReadOnly = true;
-
-            dataGridRow5.Height = 25;
-
-            dataGridView1.Rows.Add(dataGridRow5);
-
+           
 //---------------------------------------------------------------------------------------
 
             //-----------------1st line-------------------------
@@ -353,18 +289,21 @@ namespace Sem_Supervised_Sites_PartB
        
         private void button5_Click(object sender, EventArgs e)
         {
-            date1 = DateTime.Now;                 
+            date1 = DateTime.Now;
 
-            double[,] matr = new double[5, 2] { { -4, 3 }, { -3, 4 }, { 2, -1 }, { -3, 1 }, { 4, -2 } };
-            double[,] matr1 = new double[2, 2] { { -4, 3 }, { -3, 4 } };
-            double[,] matr2 = new double[2, 2] { { 2, -1 }, { 4, -2 } };
+            /*double[,] matr = new double[7, 3] { { 5, 2, 1 }, { 6, 3, 1 }, { 4, 6, 1 }, { 3, 6, 2 }, { 1, 1, 5 }, { 1, 1, 4 }, { 4,7,2 } };
+            double[,] matr1 = new double[2, 3] { { 5, 2, 1 }, { 6, 3, 1 } };
+            double[,] matr2 = new double[2, 3] { { 4, 6, 1 }, { 3, 6, 2 } };
+            double[,] matr3 = new double[2, 3] { { 1, 1, 5 }, { 1, 1, 4 } };
 
             LinkedList<double[,]> ll = new LinkedList<double[,]>();
-            ll.AddFirst(matr1);
-            ll.AddFirst(matr2);
-            
+            ll.AddLast(matr1);
+            ll.AddLast(matr2);
+            ll.AddLast(matr3);*/
+
             //Activate MPCK after all info is collected
-            MPCKMeans k = new MPCKMeans(2, matr, ll, 10, 10);
+            MPCKMeans k = new MPCKMeans(Form1.FirStaticVar.getNumOfTopics(), Tools.pca_result, Tools.mLC, Form1.FirStaticVar.getW(), Form1.FirStaticVar.getW_Roof());
+            //MPCKMeans k = new MPCKMeans(3, matr, ll, 10, 10);
             MPCKMeans.cluster[] clust = k.getPoints();
             int num = k.getClustNum();
             
@@ -418,8 +357,17 @@ namespace Sem_Supervised_Sites_PartB
 
         private void button6_Click(object sender, EventArgs e)
         {
+            //Optionally delete all site lists in GUI2
+            /*Form1.FirStaticVar.panel2.siteList_items.Clear();
+            Form1.FirStaticVar.panel2.dataGridView1.Rows.Clear();
+            Form1.FirStaticVar.panel2.dataGridView2.Rows.Clear();*/
             Form1.StatPanel3.Hide();
             Form1.StatPanel2.Show();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            
         }
     }
 }
