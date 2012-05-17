@@ -513,8 +513,20 @@ namespace Sem_Supervised_Sites_PartB
 
         private void button6_Click(object sender, EventArgs e)
         {
+            foreach (string s in siteList_items)
+            {
+                bool finish = false;
+                for (int i = 0; i < SitesFileNamesList_StopWords.Count() && !finish; i++)
+                {
+                    if (SitesFileNamesList_StopWords[i].Contains(s))
+                    {
+                        SitesFileNamesList_StopWords.RemoveAt(i);
+                        finish = true;
+                    }
+                }
+            }
             siteList_items.Clear();
-            this.dataGridView1.Rows.Clear();
+            //this.dataGridView1.Rows.Clear();
             this.dataGridView2.Rows.Clear();
             this.Hide();
             Form1.FirStaticVar.Show();

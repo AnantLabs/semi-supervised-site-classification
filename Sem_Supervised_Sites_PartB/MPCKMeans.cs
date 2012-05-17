@@ -142,13 +142,13 @@ namespace Sem_Supervised_Sites_PartB
                        r, this.clust[i].learningMatrix), r));
                     
                     //log(det(A))
-                    double logDetA = Math.Log10(Tools.det(this.clust[i].learningMatrix, ALen));
+                    //double logDetA = Math.Log10(Tools.det(this.clust[i].learningMatrix, ALen));
 
                     double must_viol =  must_viol_compute(i,t);
 
                     double cannot_viol =  cannot_viol_compute(i,t, not_first_run); 
 
-                    obj_func[i] = multVecCentrA - logDetA + must_viol + cannot_viol;
+                    obj_func[i] = multVecCentrA + must_viol + cannot_viol;
                 }
                 
                 min_clust= Tools.MinIndex(obj_func);

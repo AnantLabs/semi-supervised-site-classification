@@ -71,8 +71,8 @@ namespace Sem_Supervised_Sites_PartB
         //find min index of array
         public static int MinIndex(double[] temp)
         {
-            int min = 0;
-            double tmp_val = 999;
+            int min = -1;
+            double tmp_val = 99999;
             for (int i = 0; i < temp.Length; i++)
                 if (temp[i] < tmp_val)
                 {
