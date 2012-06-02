@@ -114,7 +114,7 @@ namespace Sem_Supervised_Sites_PartB
                 //if there is no change in points assignment, convergence=0
                 convergence = assignCluster();
                 estimateMeans();
-                updateMetrics();
+                //updateMetrics();
                 max_itter--;
             }
             

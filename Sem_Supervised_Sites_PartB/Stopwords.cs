@@ -78,6 +78,19 @@ namespace Project_Phase_B___Engine_Stopwords
                                             .Replace("}", string.Empty)
                                             .Replace("{", string.Empty)
                                             .Replace("^", string.Empty)
+                                            .Replace("~", string.Empty)
+                                            .Replace("@", string.Empty)
+                                            .Replace("#", string.Empty)
+                                            .Replace("$", string.Empty)
+                                            .Replace("%", string.Empty)
+                                            .Replace("&", string.Empty)
+                                            .Replace("<", string.Empty)
+                                            .Replace(">", string.Empty)
+                                            .Replace("-", string.Empty)
+                                            .Replace("_", string.Empty)
+                                            .Replace("=", string.Empty)
+                                            .Replace(":", string.Empty)
+                                            .Replace(";", string.Empty)
                                             .Replace("+", string.Empty);
 
             // transform search string into array of words
@@ -102,66 +115,7 @@ namespace Project_Phase_B___Engine_Stopwords
         }
 
 
-   //     static void Main(string[] args)
-   //     {
-            
-        /*    const string f = "Site1.txt";
-            SearchHelper sh1= new SearchHelper();
-            string[] sitesFileNames = { "Site1_new.txt", "Site2_new.txt", "Site3_new.txt" };
-            BagofWords bag;
-            double[,] sitesFreq;
 
-            StreamReader streamReader = new StreamReader("Site1.txt");
-            string text = streamReader.ReadToEnd();
-            streamReader.Close();
-
-
-            using (StreamWriter outfile = new StreamWriter("Site1_new.txt"))
-            {
-                outfile.Write(sh1.CleanSearchedWords(text));
-            }
-
-           streamReader = new StreamReader("Site2.txt");
-            text = streamReader.ReadToEnd();
-            streamReader.Close();
-
-
-            using (StreamWriter outfile = new StreamWriter("Site2_new.txt"))
-            {
-                outfile.Write(sh1.CleanSearchedWords(text));
-            }
-
-            streamReader = new StreamReader("Site3.txt");
-            text = streamReader.ReadToEnd();
-            streamReader.Close();
-
-
-            using (StreamWriter outfile = new StreamWriter("Site3_new.txt"))
-            {
-                outfile.Write(sh1.CleanSearchedWords(text));
-            }
-            
-            bag = new BagofWords(sitesFileNames);
-            bag.setSitesFreqVector();
-            sitesFreq = bag.getSitesFreqVector();
-            int NumOfSites=bag.getNumOfSites(); 
-            int NumOfWordsDictionary = bag.getNumOfWordsInDictionary();
-
-            for (int i = 0; i < NumOfSites; i++)
-            {
-                for (int j = 0; j < NumOfWordsDictionary; j++)
-                {
-
-                    Console.Write("{0} ", sitesFreq[i, j]);
-
-                }
-                Console.WriteLine("");
-            }
-            Console.ReadKey();
-            PCA pc = new PCA(sitesFreq, 3);
-            pc.compute();
-            Console.ReadKey(); */
-   //     } 
    
 
     } // end Class Stopwords

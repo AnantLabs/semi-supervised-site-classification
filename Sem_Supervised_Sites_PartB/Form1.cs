@@ -13,7 +13,9 @@ namespace Sem_Supervised_Sites_PartB
     {
         public bool topicAdd, mustViolAdd, cannotViolAdd;
         List<string> _items = new List<string>();
-        public string[] Topics;
+        public List<string> Topics = null;
+        public List<string> Deleted_Topics = null;
+        //public string[] Topics;
         double W;
         double W_roof;
         int num_of_topics;
@@ -35,7 +37,8 @@ namespace Sem_Supervised_Sites_PartB
             public int SupervisedCounter;
 
         }
-        public tmpClust[] tmpCluster;
+        //public tmpClust[] tmpCluster;
+        public List<tmpClust> tmpCluster=null;
 
 
         public struct ClusterNode
@@ -57,13 +60,13 @@ namespace Sem_Supervised_Sites_PartB
             mustViolAdd = false;
             cannotViolAdd = false;
             dictionary_ClusterNameToValue = new Dictionary<string, int>();
-            
 
-            panel2.Hide();
-            panel3.Hide();
-            StatPanel2 = panel2;
+           
+            panel2.Hide();  // <-----
+            panel3.Hide(); // <-----
+            StatPanel2 = panel2; // <-----
             //StatPanel3 = panel3;
-            StatPanel4 = panel4;
+            StatPanel4 = panel4; // <-------
 
            
         }
@@ -102,10 +105,36 @@ namespace Sem_Supervised_Sites_PartB
         private void button2_Click(object sender, EventArgs e)
         {
             //dictionary_ClusterNameToValue.Remove(listBox1.SelectedItem.ToString());
-            
+            object Selected = listBox1.SelectedItem;
+            string Selected_Topic_String = Selected.ToString();
+
+            if (Deleted_Topics == null)
+            {
+                Deleted_Topics = new List<string>();
+
+            }
+
+
+            for (int j = 0; j < tmpCluster.Count() ; j++)
+            {
+                if (tmpCluster[j].clusterName.Equals(Selected_Topic_String))
+                {
+                    Deleted_Topics.Add(Selected_Topic_String);
+                    tmpCluster.RemoveAt(j);
+                    break;
+
+                }
+            }
+
+
             listBox1.Items.Remove(listBox1.SelectedItem);
             if (num_of_topics > 0)
+            {
                 num_of_topics--;
+            }
+
+
+            //remove the node
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -165,20 +194,52 @@ namespace Sem_Supervised_Sites_PartB
 
         private void button3_Click(object sender, EventArgs e)
         {
-            tmpCluster = new tmpClust[listBox1.Items.Count];
-            Topics= new string[listBox1.Items.Count];
+            bool found_in_tmp_cluster;
+            
+            if (tmpCluster == null)
+            {
+                // tmpCluster = new tmpClust[listBox1.Items.Count];
+                tmpCluster = new List<tmpClust>();
+            }
 
+            if (Topics == null)
+            {
+                //Topics = new string[listBox1.Items.Count];
+                Topics = new List<string>();
+            }
+            tmpCluster.Clear(); // <------------- Added Here
+            Topics.Clear();
+            dictionary_ClusterNameToValue.Clear(); 
             for (int i = 0; i < listBox1.Items.Count; i++)
             {
-                             
-                
                 object s = listBox1.Items[i];
-                Topics[i] = s.ToString();
+                //Topics[i] = s.ToString();
+                string s_temp = s.ToString();
 
-                tmpCluster[i].SupervisedCounter = 0;
-                tmpCluster[i].clusterName = Topics[i];
-                tmpCluster[i].relatedPoints = new LinkedList<vectorNode>();
+                //if (!Topics.Exists(element => element == s_temp ))
+                Topics.Add(s.ToString());
 
+                found_in_tmp_cluster=false;
+
+                for (int j = 0; j < tmpCluster.Count() && !found_in_tmp_cluster ; j++)
+                {
+                    if (tmpCluster[j].clusterName.Equals(s.ToString()))
+                        found_in_tmp_cluster = true;
+                }
+
+                if (!found_in_tmp_cluster)
+                {
+                    tmpClust temp_for_new_cell = new tmpClust();
+
+                    temp_for_new_cell.SupervisedCounter = 0;
+                    temp_for_new_cell.clusterName = Topics[i];
+                    temp_for_new_cell.relatedPoints = new LinkedList<vectorNode>();
+                    //tmpCluster[i].SupervisedCounter = 0;
+                    //tmpCluster[i].clusterName = Topics[i];
+                    //tmpCluster[i].relatedPoints = new LinkedList<vectorNode>();
+                    tmpCluster.Add(temp_for_new_cell);
+                }
+                 
                 string word = s.ToString();
                 int value;
                 if (!dictionary_ClusterNameToValue.TryGetValue(word, out value))
@@ -188,8 +249,8 @@ namespace Sem_Supervised_Sites_PartB
 
 
             }
-            
-           // panel2.RamiTest();
+
+            panel2.UpdateGUI2(); //<--------
             StatPanel2.Show();
             StatPanel2.BringToFront();
            
@@ -211,14 +272,27 @@ namespace Sem_Supervised_Sites_PartB
            // dictionary_ClusterNameToValue.Clear();
             listBox1.Items.Clear();
             num_of_topics = 0;
+            topicAdd = false;
+            button3.Enabled = false;
+
+           // Add here a feature that if there's no topic, the Next Button isn't enabled!
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            mustViolAdd = true;
+            
             if (topicAdd && mustViolAdd && cannotViolAdd)
                 this.button3.Enabled = true;
-            W = double.Parse(textBox1.Text);
+            try
+            {
+                W = double.Parse(textBox1.Text);
+                mustViolAdd = true;
+            }
+            catch
+            {
+                MessageBox.Show("Please enter only numbers into the text box!", "Input error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void rectangleShape2_Click(object sender, EventArgs e)
@@ -243,10 +317,19 @@ namespace Sem_Supervised_Sites_PartB
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            cannotViolAdd = true;
+            
             if (topicAdd && mustViolAdd && cannotViolAdd)
                 this.button3.Enabled = true;
-            W_roof = double.Parse(textBox2.Text);
+            try
+            {
+                W_roof = double.Parse(textBox2.Text);
+                cannotViolAdd = true;
+            }
+            catch
+            {
+                MessageBox.Show("Please enter only numbers into the text box!", "Input error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public double getW()
@@ -265,11 +348,15 @@ namespace Sem_Supervised_Sites_PartB
             return num_of_topics;
         }
 
-        public tmpClust[] getTmpClusterArray()
+      /*  public tmpClust[] getTmpClusterArray()
+        {
+            return tmpCluster;
+        } */
+
+        public List<tmpClust> getTmpClusterArray()
         {
             return tmpCluster;
         }
-
         public int dictionary_ClusterNameToValue_KeyToVal(string key)
         {
             int value;
@@ -302,5 +389,11 @@ namespace Sem_Supervised_Sites_PartB
         {
 
         }
+
+        private void lblTopics_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

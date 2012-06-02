@@ -18,14 +18,12 @@ namespace Sem_Supervised_Sites_PartB
 
         int num_of_words_in_dictionary;
         string[] words_in_dictionary;
-        BagofWords Bag_Gui3;
+ 
         
 
         public static DateTime date1;
 
         public static Form3 ThirStaticVar;
-        static int num_of_words = 10;
-        string[] dictionary = new string[] { "sport", "computer", "fashion", "team", "designer", "basketball", "football", "platform", "Sony", "Kinect" };
         
         List<string> _items = new List<string>();
         List<string> _items2 = new List<string>();
@@ -34,246 +32,37 @@ namespace Sem_Supervised_Sites_PartB
         List<string> _items5 = new List<string>();
         List<string> _items6 = new List<string>();
         List<string> _items7 = new List<string>();
+
+       
         public Form3()
         {
             
             //this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
-
-         
-            _items.Add("www.nba.com");
-            _items.Add("www.espn.com");
-            
-            listBox1.DataSource = _items;
-            listBox1.ClearSelected();
-
-            _items2.Add("www.gamespot.com");
-            _items2.Add("www.1up.com");
-
-            listBox2.DataSource = _items2;
-            listBox2.ClearSelected();
-
-            _items3.Add("www.ftv.com");
-            _items3.Add("www.victoriasecret.com");
-
-            listBox3.DataSource = _items3;
-            listBox3.ClearSelected();
-
-            _items4.Add("www.ftv.com");
-            _items4.Add("www.nba.com");
-
-            listBox4.DataSource = _items4;
-            listBox4.ClearSelected();
-
-            _items5.Add("www.victoriasecret.com");
-            _items5.Add("www.espn.com");
-
-            listBox5.DataSource = _items5;
-            listBox5.ClearSelected();
-
-            _items6.Add("www.gamespot.com");
-            _items6.Add("www.ftv.com");
-
-            listBox6.DataSource = _items6;
-            listBox6.ClearSelected();
-
-            _items7.Add("www.1up.com");
-            _items7.Add("www.nba.com");
-
-            listBox7.DataSource = _items7;
-            listBox7.ClearSelected();
-
-            
-
-            // Dictionary Table
-
-            this.num_of_words_in_dictionary = Tools.num_of_words_in_dictionary;
-            this.words_in_dictionary = Tools.words_in_dictionary;
-
-            for (int i = 0; i < this.num_of_words_in_dictionary; i++)
-            {
-                DataGridViewRow dataGridRow = new DataGridViewRow();
-                DataGridViewTextBoxCell txt1A_i1 = new DataGridViewTextBoxCell();
-                DataGridViewTextBoxCell txt1A = new DataGridViewTextBoxCell();
-
-                txt1A_i1.Value = i+1;
-                txt1A.Value = words_in_dictionary[i];
-
-                dataGridRow.Cells.Add(txt1A_i1);
-                txt1A_i1.ReadOnly = true;
-                dataGridRow.Cells.Add(txt1A);
-                txt1A.ReadOnly = true;
-
-                dataGridRow.Height = 25;
-
-
-
-                dataGridView1.Rows.Add(dataGridRow);
-
-            }
-
-           
-//---------------------------------------------------------------------------------------
-
-            //-----------------1st line-------------------------
-
-            DataGridViewRow dataGridRow2_1 = new DataGridViewRow();
-            //  DataGridViewCell[] cells = new DataGridViewCell[2];
-            DataGridViewTextBoxCell txt1A_1 = new DataGridViewTextBoxCell();
-            DataGridViewTextBoxCell txt1A_2 = new DataGridViewTextBoxCell();
-            DataGridViewTextBoxCell txt1A_3 = new DataGridViewTextBoxCell();
-
-          //  txt1A_1.Value = "Sports";
-
-          //  dataGridRow2_1.Cells.Add(txt1A_1);
-          //  txt1A_1.ReadOnly = true;
-           
-
-            txt1A_2.Value = "www.espn.com";
-            dataGridRow2_1.Cells.Add(txt1A_2);
-
-           // txt1A_3.Value = "{10,0,20,1,0,0,0,0,0,0}";
-            txt1A_3.Value = "{50,10,4}";
-            dataGridRow2_1.Cells.Add(txt1A_3);
-
-            dataGridRow2_1.Height = 25;
-
-            dataGridView2.Rows.Add(dataGridRow2_1);
-
-         //-----------------2nd line-------------------------
-
-
-            DataGridViewRow dataGridRow2_2 = new DataGridViewRow();
-            //  DataGridViewCell[] cells = new DataGridViewCell[2];
-            DataGridViewTextBoxCell txt2A_1 = new DataGridViewTextBoxCell();
-            DataGridViewTextBoxCell txt2A_2 = new DataGridViewTextBoxCell();
-            DataGridViewTextBoxCell txt2A_3 = new DataGridViewTextBoxCell();
-
-         //   txt2A_1.Value = " ";
-         //   dataGridRow2_2.Cells.Add(txt2A_1);
-         //   txt2A_1.ReadOnly = true;
-
-
-            txt2A_2.Value = "www.nba.com";
-            dataGridRow2_2.Cells.Add(txt2A_2);
-            txt2A_2.ReadOnly = true;
-
-            //txt2A_3.Value = "{20,1,21,1,0,0,0,0,0,0}";
-            txt2A_3.Value = "{40,20,13}";
-            dataGridRow2_2.Cells.Add(txt2A_3);
-            txt2A_3.ReadOnly = true;
-
-            dataGridRow2_2.Height = 25;
-
-            dataGridView2.Rows.Add(dataGridRow2_2);
-
-         //-----------------3rd line-------------------------
-
-
-            DataGridViewRow dataGridRow2_3 = new DataGridViewRow();
-            //  DataGridViewCell[] cells = new DataGridViewCell[2];
-            DataGridViewTextBoxCell txt3A_1 = new DataGridViewTextBoxCell();
-            DataGridViewTextBoxCell txt3A_2 = new DataGridViewTextBoxCell();
-            DataGridViewTextBoxCell txt3A_3 = new DataGridViewTextBoxCell();
-
-         //   txt3A_1.Value = "Computers";
-         //   dataGridRow2_3.Cells.Add(txt3A_1);
-         //   txt3A_1.ReadOnly = true;
-
-
-            txt3A_2.Value = "www.gamespot.com";
-            dataGridRow2_3.Cells.Add(txt3A_2);
-            txt3A_2.ReadOnly = true;
-
-            //txt3A_3.Value = "{5,30,10,1,20,0,0,0,0,0}";
-            txt3A_3.Value = "{30,70,6}";
-            dataGridRow2_3.Cells.Add(txt3A_3);
-            txt3A_3.ReadOnly = true;
-
-            dataGridRow2_3.Height = 25;
-
-            dataGridView2.Rows.Add(dataGridRow2_3);
-
-        //-----------------4th line-------------------------
-
-            DataGridViewRow dataGridRow2_4 = new DataGridViewRow();
-            //  DataGridViewCell[] cells = new DataGridViewCell[2];
-            DataGridViewTextBoxCell txt4A_1 = new DataGridViewTextBoxCell();
-            DataGridViewTextBoxCell txt4A_2 = new DataGridViewTextBoxCell();
-            DataGridViewTextBoxCell txt4A_3 = new DataGridViewTextBoxCell();
-
-        //    txt4A_1.Value = "Fashion";
-        //    dataGridRow2_4.Cells.Add(txt4A_1);
-        //    txt4A_1.ReadOnly = true;
-
-
-            txt4A_2.Value = "www.victoriasecret.com";
-            dataGridRow2_4.Cells.Add(txt4A_2);
-            txt4A_2.ReadOnly = true;
-
-            //txt4A_3.Value = "{15,3,6,0,4,0,0,0,0,0}";
-            txt4A_3.Value = "{40,3,120}";
-            dataGridRow2_4.Cells.Add(txt4A_3);
-            txt4A_3.ReadOnly = true;
-
-            dataGridRow2_4.Height = 25;
-
-            dataGridView2.Rows.Add(dataGridRow2_4);
-
-
-            //-----------------5th line-------------------------
-
-            DataGridViewRow dataGridRow2_5 = new DataGridViewRow();
-            //  DataGridViewCell[] cells = new DataGridViewCell[2];
-            DataGridViewTextBoxCell txt5A_1 = new DataGridViewTextBoxCell();
-            DataGridViewTextBoxCell txt5A_2 = new DataGridViewTextBoxCell();
-            DataGridViewTextBoxCell txt5A_3 = new DataGridViewTextBoxCell();
-
-          //  txt5A_1.Value = "Fashion";
-          //  dataGridRow2_5.Cells.Add(txt5A_1);
-          //  txt5A_1.ReadOnly = true;
-
-
-            txt5A_2.Value = "www.ftv.com";
-            dataGridRow2_5.Cells.Add(txt5A_2);
-            txt5A_2.ReadOnly = true;
-
-            //txt5A_3.Value = "{15,3,6,100,70,0,0,0,0,0}";
-            txt5A_3.Value = "{40,3,200}";
-            dataGridRow2_5.Cells.Add(txt5A_3);
-            txt5A_3.ReadOnly = true;
-
-            dataGridRow2_5.Height = 25;
-
-            dataGridView2.Rows.Add(dataGridRow2_5);
-
-            //-----------------6th line-------------------------
-
-            DataGridViewRow dataGridRow2_6 = new DataGridViewRow();
-            //  DataGridViewCell[] cells = new DataGridViewCell[2];
-            DataGridViewTextBoxCell txt6A_1 = new DataGridViewTextBoxCell();
-            DataGridViewTextBoxCell txt6A_2 = new DataGridViewTextBoxCell();
-            DataGridViewTextBoxCell txt6A_3 = new DataGridViewTextBoxCell();
-
-           // txt6A_1.Value = "No Topic";
-           // dataGridRow2_6.Cells.Add(txt6A_1);
-           // txt6A_1.ReadOnly = true;
-
-
-            txt6A_2.Value = "www.1up.com";
-            dataGridRow2_6.Cells.Add(txt6A_2);
-            txt6A_2.ReadOnly = true;
-
-            txt6A_3.Value = "{30,200,3}";
-            dataGridRow2_6.Cells.Add(txt6A_3);
-            txt6A_3.ReadOnly = true;
-
-            dataGridRow2_6.Height = 25;
-
-            dataGridView2.Rows.Add(dataGridRow2_6);
-
-            
-        }
+            dataGridView1.AllowUserToAddRows = false;
+            dataGridView2.AllowUserToAddRows = false;
+            dataGridView3.AllowUserToAddRows = false;
+
+
+            this.dataGridView1.Columns[0].HeaderCell.Style.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.Columns[1].HeaderCell.Style.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowHeadersDefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowsDefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.RowsDefaultCellStyle.ForeColor = Color.Black;
+
+            this.dataGridView2.Columns[0].HeaderCell.Style.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView2.Columns[1].HeaderCell.Style.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView2.RowHeadersDefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView2.RowsDefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView2.RowsDefaultCellStyle.ForeColor = Color.Black;
+
+            this.dataGridView3.Columns[0].HeaderCell.Style.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView3.Columns[1].HeaderCell.Style.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView3.RowHeadersDefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView3.RowsDefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView3.RowsDefaultCellStyle.ForeColor = Color.Black;
+
+        } 
 
         private void label7_Click(object sender, EventArgs e)
         {
@@ -365,9 +154,161 @@ namespace Sem_Supervised_Sites_PartB
             Form1.StatPanel2.Show();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+       
+
+        public void Show_Dictionary()
+        {
+
+            // Dictionary Table
+
+            this.num_of_words_in_dictionary = Tools.num_of_words_in_dictionary;
+            this.words_in_dictionary = Tools.words_in_dictionary;
+            dataGridView1.Rows.Clear();
+            for (int i = 0; i < this.num_of_words_in_dictionary; i++)
+            {
+                DataGridViewRow dataGridRow = new DataGridViewRow();
+                DataGridViewTextBoxCell txt1A_i1 = new DataGridViewTextBoxCell();
+                DataGridViewTextBoxCell txt1A = new DataGridViewTextBoxCell();
+
+                txt1A_i1.Value = i + 1;
+                txt1A.Value = words_in_dictionary[i];
+
+                dataGridRow.Cells.Add(txt1A_i1);
+                txt1A_i1.ReadOnly = true;
+                dataGridRow.Cells.Add(txt1A);
+                txt1A.ReadOnly = true;
+
+                dataGridRow.Height = 25;
+
+
+
+                dataGridView1.Rows.Add(dataGridRow);
+
+            }
+
+        }
+
+        public void Show_Datagridview2_Sites_Vectors()
+        {
+            int num_of_topics = Form1.FirStaticVar.getNumOfTopics();
+            LinkedList<Sem_Supervised_Sites_PartB.Form1.vectorNode> relatedPoints_temp = new LinkedList<Sem_Supervised_Sites_PartB.Form1.vectorNode>();
+            //Sem_Supervised_Sites_PartB.Form1.vectorNode vectorNodeTmp;
+
+
+            dataGridView2.Rows.Clear();
+            relatedPoints_temp.Clear();
+
+            for (int i = 0; i < num_of_topics; i++)
+            {
+                relatedPoints_temp = Form1.FirStaticVar.tmpCluster[i].relatedPoints;
+
+                foreach (Sem_Supervised_Sites_PartB.Form1.vectorNode vectorNodeTmp in relatedPoints_temp)
+                {
+                    DataGridViewRow dataGridRow = new DataGridViewRow();
+                    DataGridViewTextBoxCell txt2A_i2 = new DataGridViewTextBoxCell();
+
+                    txt2A_i2.Value = vectorNodeTmp.name;
+
+                    DataGridViewTextBoxCell txt2A = new DataGridViewTextBoxCell();
+
+                    string vector_representation = "{";
+
+                    for (int j = 0; j < vectorNodeTmp.vector.Count(); j++)
+                    {
+                        vector_representation += vectorNodeTmp.vector[j].ToString();
+                        if ( j < vectorNodeTmp.vector.Count() -1 )
+                          vector_representation += ",";
+
+                    }
+
+                    
+                    vector_representation+= "}";
+
+                    txt2A.Value = vector_representation;
+
+                    dataGridRow.Cells.Add(txt2A_i2);
+                    txt2A_i2.ReadOnly = true;
+                    dataGridRow.Cells.Add(txt2A);
+                    txt2A.ReadOnly = true;
+
+                    dataGridRow.Height = 25;
+
+
+
+                    dataGridView2.Rows.Add(dataGridRow);
+
+
+                }
+
+
+            }
+
+        }
+
+
+        public void Show_Datagridview3_Topics_Sites()
+        {
+            int num_of_topics = Form1.FirStaticVar.getNumOfTopics();
+            LinkedList<Sem_Supervised_Sites_PartB.Form1.vectorNode> relatedPoints_temp = new LinkedList<Sem_Supervised_Sites_PartB.Form1.vectorNode>();
+            //Sem_Supervised_Sites_PartB.Form1.vectorNode vectorNodeTmp;
+
+
+            dataGridView3.Rows.Clear();
+            relatedPoints_temp.Clear();
+
+            for (int i = 0; i < num_of_topics; i++)
+            {
+                relatedPoints_temp = Form1.FirStaticVar.tmpCluster[i].relatedPoints;
+
+                foreach (Sem_Supervised_Sites_PartB.Form1.vectorNode vectorNodeTmp in relatedPoints_temp)
+                {
+                    DataGridViewRow dataGridRow = new DataGridViewRow();
+                    DataGridViewTextBoxCell txt3A_i3 = new DataGridViewTextBoxCell();
+
+                    txt3A_i3.Value = Form1.FirStaticVar.tmpCluster[i].clusterName;
+
+                    DataGridViewTextBoxCell txt3A = new DataGridViewTextBoxCell();
+
+                    txt3A.Value = vectorNodeTmp.name;
+
+                    dataGridRow.Cells.Add(txt3A_i3);
+                    txt3A_i3.ReadOnly = true;
+                    dataGridRow.Cells.Add(txt3A);
+                    txt3A.ReadOnly = true;
+
+                    dataGridRow.Height = 25;
+
+                    dataGridView3.Rows.Add(dataGridRow);
+
+
+                }
+
+
+            }
+
+        }
+
+        public void Datagridview_No_Selection()
         {
             
+            
+            for (int i = 0; i < this.dataGridView1.Rows.Count; i++)
+                this.dataGridView1.Rows[i].Selected = false;
+
+            for (int i = 0; i < this.dataGridView2.Rows.Count; i++)
+                this.dataGridView2.Rows[i].Selected = false;
+
+            for (int i = 0; i < this.dataGridView3.Rows.Count; i++)
+                this.dataGridView3.Rows[i].Selected = false;
         }
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+
+
     }
 }

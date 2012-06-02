@@ -17,7 +17,6 @@ namespace Sem_Supervised_Sites_PartB
         private DateTime date2;
         private TimeSpan duration;
 
-        //remove that crap after
         public struct vectorNode
         {
             public double[] vector;
@@ -43,6 +42,18 @@ namespace Sem_Supervised_Sites_PartB
 
             InitializeComponent();
 
+            this.dataGridView2.Columns[0].HeaderCell.Style.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView2.Columns[1].HeaderCell.Style.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView2.Columns[2].HeaderCell.Style.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView2.RowHeadersDefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView2.RowsDefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView2.RowsDefaultCellStyle.ForeColor = Color.Black;
+
+
+
+
+            dataGridView2.AllowUserToAddRows = false;
+            dataGridView2.ClearSelection();
             string k;
             int index;
 
@@ -50,7 +61,7 @@ namespace Sem_Supervised_Sites_PartB
             foreach (string key in dic.Keys.ToList())
             {
                 Int32.TryParse(key,out index);
-                k = "Cluster: " + Form1.FirStaticVar.tmpCluster[index].clusterName;
+                k = Form1.FirStaticVar.tmpCluster[index].clusterName;
                 chart1.Series.Add(k).ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
                 foreach (double[] temp in dic[key])
                 {
@@ -118,14 +129,17 @@ namespace Sem_Supervised_Sites_PartB
 
                     dataGridRow.Resizable = DataGridViewTriState.False;
                     dataGridView2.Rows.Add(dataGridRow);
+                    dataGridView2.ClearSelection();
+                    
+
                 }
             }
             percent = (greenCount / (redCount+greenCount)) * 100;
             this.label3.Text = "Precision Rate  : "+percent+"%";
             date2 = DateTime.Now;
-            duration = date2 - Form3.date1;
-            double timeInSec = ((double)(duration.Milliseconds))/1000;
-            this.label2.Text = "Algorithm Run-Time : " + timeInSec + " Seconds";
+            duration = (date2 - Form3.date1)+Form2.duration2;
+            this.label2.Text = "Algorithm Run-Time : " + duration.Seconds + "." + duration.Milliseconds + " Seconds";
+            dataGridView2.ClearSelection();
         }
 
 
@@ -156,6 +170,7 @@ namespace Sem_Supervised_Sites_PartB
 
         }
 
+
         private void Form4_Load(object sender, EventArgs e)
         {
 
@@ -170,6 +185,22 @@ namespace Sem_Supervised_Sites_PartB
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            hist histgr = new hist(dic, clustNum);
+            histgr.Show();
+        }
+
+        protected override void OnShown(EventArgs e)
+        {
+            
+                for (int i = 0; i < this.dataGridView2.SelectedCells.Count; i++)
+                    this.dataGridView2.SelectedCells[i].Selected = false;
+            
+        } 
+
+
 
     }
 }
