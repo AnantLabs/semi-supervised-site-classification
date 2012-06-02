@@ -71,10 +71,10 @@
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
   <ItemGroup>
     <Reference Include="AForge">
-      <HintPath>..\..\Externals\AForge\AForge.dll</HintPath>
+      <HintPath>bin\x86\Debug\AForge.dll</HintPath>
     </Reference>
     <Reference Include="AForge.Math">
-      <HintPath>..\..\Externals\AForge\AForge.Math.dll</HintPath>
+      <HintPath>bin\x86\Debug\AForge.Math.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
