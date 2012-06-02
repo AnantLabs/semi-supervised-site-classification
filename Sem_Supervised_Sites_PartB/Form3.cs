@@ -61,7 +61,6 @@ namespace Sem_Supervised_Sites_PartB
             this.dataGridView3.RowHeadersDefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView3.RowsDefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dataGridView3.RowsDefaultCellStyle.ForeColor = Color.Black;
-
         } 
 
         private void label7_Click(object sender, EventArgs e)
@@ -290,16 +289,16 @@ namespace Sem_Supervised_Sites_PartB
 
         public void Datagridview_No_Selection()
         {
-            
-            
-            for (int i = 0; i < this.dataGridView1.Rows.Count; i++)
-                this.dataGridView1.Rows[i].Selected = false;
 
-            for (int i = 0; i < this.dataGridView2.Rows.Count; i++)
-                this.dataGridView2.Rows[i].Selected = false;
 
-            for (int i = 0; i < this.dataGridView3.Rows.Count; i++)
-                this.dataGridView3.Rows[i].Selected = false;
+            for (int i = 0; i < this.dataGridView1.SelectedCells.Count; i++)
+                this.dataGridView1.SelectedCells[i].Selected = false;
+
+            for (int i = 0; i < this.dataGridView2.SelectedCells.Count; i++)
+                this.dataGridView2.SelectedCells[i].Selected = false;
+
+            for (int i = 0; i < this.dataGridView3.SelectedCells.Count; i++)
+                this.dataGridView3.SelectedCells[i].Selected = false;
         }
         private void label3_Click(object sender, EventArgs e)
         {

@@ -68,7 +68,6 @@ E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\GenerateResource.read.
 E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\GenerateResource.write.1.tlog
 E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartA-GUI.exe
 E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartA-GUI.pdb
-E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartB.chart.resources
 D:\SCSS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartA-GUI.exe
 D:\SCSS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartA-GUI.pdb
 D:\SCSS\Sem_Supervised_Sites_PartB\bin\Debug\Sem_Supervised_Sites_PartA-GUI.exe
@@ -186,3 +185,5 @@ C:\Users\KocT9H\Desktop\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Superv
 C:\Users\KocT9H\Desktop\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartB.Resource1.resources
 C:\Users\KocT9H\Desktop\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\KocT9H\Desktop\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartB.hist.resources
+E:\Projects\SSCS\Sem_Supervised_Sites_PartB\bin\Debug\ZedGraph.dll

@@ -508,24 +508,14 @@ namespace Sem_Supervised_Sites_PartB
             Form1.FirStaticVar.panel3.Show_Dictionary();
             Form1.FirStaticVar.panel3.Show_Datagridview2_Sites_Vectors();
             Form1.FirStaticVar.panel3.Show_Datagridview3_Topics_Sites();
-            Form1.FirStaticVar.panel3.Datagridview_No_Selection();
 
             Form1.StatPanel3 = Form1.FirStaticVar.panel3;
+            Form1.FirStaticVar.panel3.Show();
+            Form1.FirStaticVar.panel3.Datagridview_No_Selection();
+            Form1.FirStaticVar.panel3.BringToFront();
+            //Form1.StatPanel3.Show();
+            //Form1.StatPanel3.BringToFront();
 
-            Form1.StatPanel3.Show();
-            Form1.StatPanel3.BringToFront();
-
-
-
-            //     GUI3_Presentation();
-
-
-
-
-            /*  this.Hide();
-                if (Form3.ThirStaticVar == null)
-                    Form3.ThirStaticVar = new Form3();
-                Form3.ThirStaticVar.Show(); */
         }
 
         private void label1_Click(object sender, EventArgs e)
