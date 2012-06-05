@@ -108,7 +108,13 @@ namespace Sem_Supervised_Sites_PartB
 
                         string[] tokens = filenamepath.Split('.');
                         string savefile_new = tokens[0] + "_new.txt";
-
+                        try
+                        {
+                            File.SetAttributes(savefile_new, FileAttributes.Normal);
+                        }
+                        catch
+                        {
+                        }
                         using (StreamWriter outfile = new StreamWriter(savefile_new))
                         {
                             outfile.Write(Stop.CleanSearchedWords(text));
@@ -120,7 +126,7 @@ namespace Sem_Supervised_Sites_PartB
 
                         SitesFileNamesList_StopWords.Add(savefile_new);
 
-
+                        File.SetAttributes(savefile_new, FileAttributes.Hidden);
                     }
                 }
                 if (numOfAdded >= 2)

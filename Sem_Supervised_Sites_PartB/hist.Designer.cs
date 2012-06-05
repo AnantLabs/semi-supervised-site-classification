@@ -28,6 +28,7 @@ namespace Sem_Supervised_Sites_PartB
 		/// </summary>
 		private void InitializeComponent()
 		{
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(hist));
             this.zg1 = new ZedGraph.ZedGraphControl();
             this.SuspendLayout();
             // 
@@ -53,6 +54,7 @@ namespace Sem_Supervised_Sites_PartB
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(463, 321);
             this.Controls.Add(this.zg1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "hist";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.Form1_Load);

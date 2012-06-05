@@ -118,29 +118,26 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Actions_edit_clear_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\Actions-edit-clear-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Add_icon128" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\Add-icon128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="left" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\left.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="running icon5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\running icon5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Actions_edit_clear_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Actions-edit-clear-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Button_Rewind_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Button-Rewind-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Add-icon72" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\Add-icon72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\search-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Actions-list-remove-icon72" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Actions-list-remove-icon72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Alarm_Arrow_Right_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Alarm-Arrow-Right-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Add_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Add-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,17 +151,23 @@
   <data name="right" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\right.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="107x64-Animated-Flag-CHECKERED-RH4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\107x64-Animated-Flag-CHECKERED-RH4.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Button_Forward_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Button-Forward-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Actions_list_remove_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\Actions-list-remove-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Add_icon128" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Add-icon128.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Actions-edit-clear-icon72" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\Actions-edit-clear-icon72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Alarm_Arrow_Right_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\Alarm-Arrow-Right-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Actions_list_remove_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Actions-list-remove-icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Add-icon72" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Add-icon72.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="search-icon48" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\search-icon48.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,7 +175,7 @@
   <data name="search-icon64" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>Resources\search-icon64.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="107x64-Animated-Flag-CHECKERED-RH4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>Resources\107x64-Animated-Flag-CHECKERED-RH4.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Picture1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Resources\Picture1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

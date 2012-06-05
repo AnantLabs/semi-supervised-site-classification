@@ -12,13 +12,6 @@ D:\SCSS - GUI Final\SCSS\Accord.Math\bin\Debug\AForge.Math.dll
 D:\SCSS - GUI Final\SCSS\Accord.Math\obj\Debug\ResolveAssemblyReference.cache
 D:\SCSS - GUI Final\SCSS\Accord.Math\obj\Debug\Accord.Math.dll
 D:\SCSS - GUI Final\SCSS\Accord.Math\obj\Debug\Accord.Math.pdb
-E:\Projects\SSCS\Accord.Math\bin\Debug\Accord.Math.dll
-E:\Projects\SSCS\Accord.Math\bin\Debug\Accord.Math.pdb
-E:\Projects\SSCS\Accord.Math\bin\Debug\AForge.dll
-E:\Projects\SSCS\Accord.Math\bin\Debug\AForge.Math.dll
-E:\Projects\SSCS\Accord.Math\obj\Debug\ResolveAssemblyReference.cache
-E:\Projects\SSCS\Accord.Math\obj\Debug\Accord.Math.dll
-E:\Projects\SSCS\Accord.Math\obj\Debug\Accord.Math.pdb
 D:\SSCS - Gui Final - 30.5 - OLD\SSCS\Accord.Math\bin\Debug\Accord.Math.dll
 D:\SSCS - Gui Final - 30.5 - OLD\SSCS\Accord.Math\bin\Debug\Accord.Math.pdb
 D:\SSCS - Gui Final - 30.5 - OLD\SSCS\Accord.Math\bin\Debug\AForge.dll
@@ -26,3 +19,10 @@ D:\SSCS - Gui Final - 30.5 - OLD\SSCS\Accord.Math\bin\Debug\AForge.Math.dll
 D:\SSCS - Gui Final - 30.5 - OLD\SSCS\Accord.Math\obj\Debug\ResolveAssemblyReference.cache
 D:\SSCS - Gui Final - 30.5 - OLD\SSCS\Accord.Math\obj\Debug\Accord.Math.dll
 D:\SSCS - Gui Final - 30.5 - OLD\SSCS\Accord.Math\obj\Debug\Accord.Math.pdb
+E:\Projects\SSCS\Accord.Math\bin\Debug\Accord.Math.dll
+E:\Projects\SSCS\Accord.Math\bin\Debug\Accord.Math.pdb
+E:\Projects\SSCS\Accord.Math\bin\Debug\AForge.dll
+E:\Projects\SSCS\Accord.Math\bin\Debug\AForge.Math.dll
+E:\Projects\SSCS\Accord.Math\obj\Debug\ResolveAssemblyReference.cache
+E:\Projects\SSCS\Accord.Math\obj\Debug\Accord.Math.dll
+E:\Projects\SSCS\Accord.Math\obj\Debug\Accord.Math.pdb

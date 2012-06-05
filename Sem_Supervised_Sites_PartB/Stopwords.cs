@@ -91,6 +91,16 @@ namespace Project_Phase_B___Engine_Stopwords
                                             .Replace("=", string.Empty)
                                             .Replace(":", string.Empty)
                                             .Replace(";", string.Empty)
+                                            .Replace("0", string.Empty)
+                                            .Replace("1", string.Empty)
+                                            .Replace("2", string.Empty)
+                                            .Replace("3", string.Empty)
+                                            .Replace("4", string.Empty)
+                                            .Replace("5", string.Empty)
+                                            .Replace("6", string.Empty)
+                                            .Replace("7", string.Empty)
+                                            .Replace("8", string.Empty)
+                                            .Replace("9", string.Empty)
                                             .Replace("+", string.Empty);
 
             // transform search string into array of words

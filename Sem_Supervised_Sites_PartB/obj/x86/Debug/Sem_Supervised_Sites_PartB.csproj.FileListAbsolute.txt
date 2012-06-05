@@ -51,23 +51,6 @@ D:\SSCS\Sem_Supervised_Sites_PartB\bin\Debug\AForge.dll
 D:\SSCS\Sem_Supervised_Sites_PartB\bin\Debug\Accord.Math.pdb
 D:\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartA-GUI.exe
 D:\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartA-GUI.pdb
-E:\Projects\SSCS\Sem_Supervised_Sites_PartB\bin\Debug\Sem_Supervised_Sites_PartA-GUI.exe
-E:\Projects\SSCS\Sem_Supervised_Sites_PartB\bin\Debug\Sem_Supervised_Sites_PartA-GUI.pdb
-E:\Projects\SSCS\Sem_Supervised_Sites_PartB\bin\Debug\Accord.Math.dll
-E:\Projects\SSCS\Sem_Supervised_Sites_PartB\bin\Debug\AForge.Math.dll
-E:\Projects\SSCS\Sem_Supervised_Sites_PartB\bin\Debug\AForge.dll
-E:\Projects\SSCS\Sem_Supervised_Sites_PartB\bin\Debug\Accord.Math.pdb
-E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\ResolveAssemblyReference.cache
-E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartB.AddTopic.resources
-E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartB.Form1.resources
-E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartB.Form2.resources
-E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartB.Form3.resources
-E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartB.Form4.resources
-E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartB.Properties.Resources.resources
-E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\GenerateResource.read.1.tlog
-E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\GenerateResource.write.1.tlog
-E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartA-GUI.exe
-E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartA-GUI.pdb
 D:\SCSS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartA-GUI.exe
 D:\SCSS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartA-GUI.pdb
 D:\SCSS\Sem_Supervised_Sites_PartB\bin\Debug\Sem_Supervised_Sites_PartA-GUI.exe
@@ -142,7 +125,6 @@ E:\Projects\SCSS - GUI Final\SCSS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_S
 E:\Projects\SCSS - GUI Final\SCSS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartB.Resource1.resources
 E:\Projects\SCSS - GUI Final\SCSS\Sem_Supervised_Sites_PartB\obj\x86\Debug\GenerateResource.read.1.tlog
 E:\Projects\SCSS - GUI Final\SCSS\Sem_Supervised_Sites_PartB\obj\x86\Debug\GenerateResource.write.1.tlog
-E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartB.Resource1.resources
 D:\SSCS - Gui Final\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartA-GUI.exe
 D:\SSCS - Gui Final\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartA-GUI.pdb
 D:\SSCS - Gui Final - 30.5 - OLD\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartA-GUI.exe
@@ -185,5 +167,23 @@ C:\Users\KocT9H\Desktop\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Superv
 C:\Users\KocT9H\Desktop\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartB.Resource1.resources
 C:\Users\KocT9H\Desktop\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\GenerateResource.read.1.tlog
 C:\Users\KocT9H\Desktop\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\GenerateResource.write.1.tlog
-E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartB.hist.resources
+E:\Projects\SSCS\Sem_Supervised_Sites_PartB\bin\Debug\Sem_Supervised_Sites_PartA-GUI.exe
+E:\Projects\SSCS\Sem_Supervised_Sites_PartB\bin\Debug\Sem_Supervised_Sites_PartA-GUI.pdb
+E:\Projects\SSCS\Sem_Supervised_Sites_PartB\bin\Debug\Accord.Math.dll
 E:\Projects\SSCS\Sem_Supervised_Sites_PartB\bin\Debug\ZedGraph.dll
+E:\Projects\SSCS\Sem_Supervised_Sites_PartB\bin\Debug\AForge.Math.dll
+E:\Projects\SSCS\Sem_Supervised_Sites_PartB\bin\Debug\AForge.dll
+E:\Projects\SSCS\Sem_Supervised_Sites_PartB\bin\Debug\Accord.Math.pdb
+E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartB.AddTopic.resources
+E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartB.Form1.resources
+E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartB.Form2.resources
+E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartB.Form3.resources
+E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartB.Form4.resources
+E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartB.hist.resources
+E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartB.Properties.Resources.resources
+E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartB.Resource1.resources
+E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartA-GUI.exe
+E:\Projects\SSCS\Sem_Supervised_Sites_PartB\obj\x86\Debug\Sem_Supervised_Sites_PartA-GUI.pdb
