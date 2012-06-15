@@ -18,7 +18,9 @@ namespace Sem_Supervised_Sites_PartB
         private int[] RGB;
         private int RGBDiv;
         private int RGBPhase;
-       
+        
+        int[,] brightPastelArray = { { 65, 140, 240 }, { 252, 180, 65 }, { 224, 64, 10 }, { 5, 100, 146 }, { 191, 191, 191 }, { 26, 59, 105 }, { 255, 227, 130 }, { 18, 156, 221 }, { 202, 107, 75 }, { 0, 92, 219 }, { 243, 210, 136 }, { 80, 99, 129 }, { 241, 185, 168 }, { 224, 131, 10 }, { 120, 147, 190 } };
+
         public hist(Dictionary<string, LinkedList<double[]>> d, int n)
 		{
             this.dic = d;
@@ -60,11 +62,11 @@ namespace Sem_Supervised_Sites_PartB
                             if (Tools.Equals(temp, tempVectorNode.vector))
                                 y[Convert.ToInt32(key)]++;
                 BarItem myBar = myPane.AddBar(labels[p], null, y,
-                    Color.FromArgb(RGB[0], RGB[1], RGB[2]));
-                myBar.Bar.Fill = new Fill(Color.FromArgb(RGB[0], RGB[1], RGB[2]), Color.White,
-                    Color.FromArgb(RGB[0], RGB[1], RGB[2]));
+                    Color.FromArgb(brightPastelArray[p % 15, 0], brightPastelArray[p % 15, 1], brightPastelArray[p % 15, 2]));
+                myBar.Bar.Fill = new Fill(Color.FromArgb(brightPastelArray[p % 15, 0], brightPastelArray[p % 15, 1], brightPastelArray[p % 15, 2]), Color.White,
+                    Color.FromArgb(brightPastelArray[p % 15, 0], brightPastelArray[p % 15, 1], brightPastelArray[p % 15, 2]));
                 y = new double[clustNum];
-                generateRGB();
+                //generateRGB();
             }
             
             myPane.XAxis.MajorTic.IsBetweenLabels = true;

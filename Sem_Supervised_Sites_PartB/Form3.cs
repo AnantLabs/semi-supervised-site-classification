@@ -33,7 +33,10 @@ namespace Sem_Supervised_Sites_PartB
         List<string> _items6 = new List<string>();
         List<string> _items7 = new List<string>();
 
-       
+
+        int[,] brightPastelArray = { { 65, 140, 240 } , {252, 180, 65}, {224, 64, 10}, {5, 100, 146}, {191, 191, 191}, {26, 59, 105}, {255, 227, 130}, {18, 156, 221}, {202, 107, 75}, {0, 92, 219}, {243, 210, 136}, {80, 99, 129}, {241, 185, 168}, {224, 131, 10}, {120, 147, 190} };
+
+
         public Form3()
         {
             
@@ -232,8 +235,7 @@ namespace Sem_Supervised_Sites_PartB
 
                     dataGridRow.Height = 25;
 
-
-
+                    
                     dataGridView2.Rows.Add(dataGridRow);
 
 
@@ -276,6 +278,12 @@ namespace Sem_Supervised_Sites_PartB
                     txt3A.ReadOnly = true;
 
                     dataGridRow.Height = 25;
+
+                    //brightPastelArray
+
+                    dataGridRow.Cells[0].Style.BackColor = Color.FromArgb(brightPastelArray[i % 15, 0], brightPastelArray[i % 15, 1], brightPastelArray[i % 15, 2]);
+                    dataGridRow.Cells[1].Style.BackColor = Color.FromArgb(brightPastelArray[i % 15, 0], brightPastelArray[i % 15, 1], brightPastelArray[i % 15, 2]);
+
 
                     dataGridView3.Rows.Add(dataGridRow);
 

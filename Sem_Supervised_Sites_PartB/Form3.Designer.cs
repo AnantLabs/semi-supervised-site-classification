@@ -289,7 +289,7 @@
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.ReadOnly = true;
             this.dataGridView3.RowHeadersVisible = false;
-            this.dataGridView3.Size = new System.Drawing.Size(340, 284);
+            this.dataGridView3.Size = new System.Drawing.Size(348, 284);
             this.dataGridView3.TabIndex = 63;
             // 
             // Column2
