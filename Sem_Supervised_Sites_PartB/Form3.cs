@@ -40,7 +40,7 @@ namespace Sem_Supervised_Sites_PartB
         public Form3()
         {
             
-            //this.StartPosition = FormStartPosition.CenterScreen;
+            
             InitializeComponent();
             dataGridView1.AllowUserToAddRows = false;
             dataGridView2.AllowUserToAddRows = false;
@@ -82,19 +82,9 @@ namespace Sem_Supervised_Sites_PartB
         {
             date1 = DateTime.Now;
 
-            /*double[,] matr = new double[7, 3] { { 5, 2, 1 }, { 6, 3, 1 }, { 4, 6, 1 }, { 3, 6, 2 }, { 1, 1, 5 }, { 1, 1, 4 }, { 4,7,2 } };
-            double[,] matr1 = new double[2, 3] { { 5, 2, 1 }, { 6, 3, 1 } };
-            double[,] matr2 = new double[2, 3] { { 4, 6, 1 }, { 3, 6, 2 } };
-            double[,] matr3 = new double[2, 3] { { 1, 1, 5 }, { 1, 1, 4 } };
-
-            LinkedList<double[,]> ll = new LinkedList<double[,]>();
-            ll.AddLast(matr1);
-            ll.AddLast(matr2);
-            ll.AddLast(matr3);*/
 
             //Activate MPCK after all info is collected
             MPCKMeans k = new MPCKMeans(Form1.FirStaticVar.getNumOfTopics(), Tools.pca_result, Tools.mLC, Form1.FirStaticVar.getW(), Form1.FirStaticVar.getW_Roof());
-            //MPCKMeans k = new MPCKMeans(3, matr, ll, 10, 10);
             MPCKMeans.cluster[] clust = k.getPoints();
             int num = k.getClustNum();
             
@@ -149,9 +139,7 @@ namespace Sem_Supervised_Sites_PartB
         private void button6_Click(object sender, EventArgs e)
         {
             //Optionally delete all site lists in GUI2
-            /*Form1.FirStaticVar.panel2.siteList_items.Clear();
-            Form1.FirStaticVar.panel2.dataGridView1.Rows.Clear();
-            Form1.FirStaticVar.panel2.dataGridView2.Rows.Clear();*/
+  
             Form1.StatPanel3.Hide();
             Form1.StatPanel2.Show();
         }
@@ -194,8 +182,7 @@ namespace Sem_Supervised_Sites_PartB
         {
             int num_of_topics = Form1.FirStaticVar.getNumOfTopics();
             LinkedList<Sem_Supervised_Sites_PartB.Form1.vectorNode> relatedPoints_temp = new LinkedList<Sem_Supervised_Sites_PartB.Form1.vectorNode>();
-            //Sem_Supervised_Sites_PartB.Form1.vectorNode vectorNodeTmp;
-
+            
 
             dataGridView2.Rows.Clear();
             relatedPoints_temp.Clear();
@@ -251,8 +238,7 @@ namespace Sem_Supervised_Sites_PartB
         {
             int num_of_topics = Form1.FirStaticVar.getNumOfTopics();
             LinkedList<Sem_Supervised_Sites_PartB.Form1.vectorNode> relatedPoints_temp = new LinkedList<Sem_Supervised_Sites_PartB.Form1.vectorNode>();
-            //Sem_Supervised_Sites_PartB.Form1.vectorNode vectorNodeTmp;
-
+            
 
             dataGridView3.Rows.Clear();
             relatedPoints_temp.Clear();

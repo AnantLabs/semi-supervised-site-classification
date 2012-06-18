@@ -35,11 +35,7 @@ namespace Sem_Supervised_Sites_PartB
         List<string> SitesFileNamesList_StopWords = new List<string>();
         string[] sitesFileNames;
 
-        //   public struct vectorNode
-        //  {
-        //      public double[] vector;
-        //     public string name;
-        // }
+     
         Sem_Supervised_Sites_PartB.Form1.vectorNode vectorNodetmp;
 
         Stopwords Stop;
@@ -48,7 +44,7 @@ namespace Sem_Supervised_Sites_PartB
 
         double[,] pca_result;
         LinkedList<double[,]> mLC = new LinkedList<double[,]>();
-        //List<double[,]> mLC_temp = new List<double[,]>();
+        
         List<double[,]> mLC_temp;
 
         string filename;
@@ -136,7 +132,7 @@ namespace Sem_Supervised_Sites_PartB
                 }
                 if (is_site_added)
                 {
-                    //int NumOfItems = siteList_items.Count();
+                    
                     int NumOfItems = siteList_items_temp.Count();
                     DataGridViewRow[] dataGridRow2_Array;
                     dataGridRow2_Array = new DataGridViewRow[NumOfItems];
@@ -157,7 +153,7 @@ namespace Sem_Supervised_Sites_PartB
                         {
                             cbo2_Array[i].Items.Add(Form1.FirStaticVar.Topics[j]);
                         }
-                        //txt2_Array[i].Value = siteList_items[i]; 
+                        
                         
                         txt2_Array[i].Value = siteList_items_temp[i];
                         dataGridRow2_Array[i].Cells.Add(txt2_Array[i]);
@@ -169,7 +165,7 @@ namespace Sem_Supervised_Sites_PartB
                 }
 
                 is_site_added = false;
-                //siteList_items.Clear();
+                
                 siteList_items_temp.Clear();
 
             }
@@ -248,7 +244,7 @@ namespace Sem_Supervised_Sites_PartB
 
                     string[] tokens = sitename.Split('.');
                     
-                    //if (s.Contains(row.Cells[0].Value.ToString()))
+                    
                     if (s.Contains(tokens[0]))
                     {
                         siteClusterNodeArray[index].name = row.Cells[0].Value.ToString();
@@ -266,7 +262,7 @@ namespace Sem_Supervised_Sites_PartB
 
                         string[] tokens = sitename.Split('.');
 
-                        //if (s.Contains(row.Cells[0].Value.ToString()))
+                        
                         if (s.Contains(tokens[0]))
                         {
                             siteClusterNodeArray[index].name = row.Cells[0].Value.ToString();
@@ -299,7 +295,7 @@ namespace Sem_Supervised_Sites_PartB
         {
             
             
-            //Bag = new BagofWords(sitesFileNames);
+            
             BagofWords Bag_temp = new BagofWords(sitesFileNames);
 
             Bag = Bag_temp;
@@ -309,7 +305,7 @@ namespace Sem_Supervised_Sites_PartB
             if (checkBox1.Checked == true) // if the enable PCA was checked
             {
                 
-                //Pca = new PCA(Bag.getSitesFreqVector(), dimensions);
+                
                 PCA Pca_temp = new PCA(Bag.getSitesFreqVector(), dimensions);
                 Pca = Pca_temp;
                 Pca.compute();
@@ -327,12 +323,12 @@ namespace Sem_Supervised_Sites_PartB
         private void setRelatedPointsInEachCluster()
         {
             int numOfSites = SitesFileNamesList_StopWords.Count();
-            this.num_of_topics = Form1.FirStaticVar.getNumOfTopics();  //<----- May cause a bug! 
+            this.num_of_topics = Form1.FirStaticVar.getNumOfTopics();  
 
             for (int i = 0; i < this.num_of_topics; i++)
-               Form1.FirStaticVar.tmpCluster[i].relatedPoints.Clear();  // <-----------ADDED NOW!
+               Form1.FirStaticVar.tmpCluster[i].relatedPoints.Clear();  
 
-            for (int i = 0; i < this.num_of_topics; i++)    // <------------------- BUG ! - Not entering here
+            for (int i = 0; i < this.num_of_topics; i++)    
             {
                 for (int j = 0; j < numOfSites; j++)
                 {
@@ -347,7 +343,7 @@ namespace Sem_Supervised_Sites_PartB
                             vectorNodetmp.vector[k] = pca_result[j, k];
                         }
 
-                        Form1.FirStaticVar.tmpCluster[i].relatedPoints.AddFirst(vectorNodetmp); // ATTENTION !<----------
+                        Form1.FirStaticVar.tmpCluster[i].relatedPoints.AddFirst(vectorNodetmp); 
                     }
 
                 }
@@ -382,7 +378,7 @@ namespace Sem_Supervised_Sites_PartB
                 tmpClust_Temp.SupervisedCounter++;
                 Form1.FirStaticVar.tmpCluster[index_for_compatible_cluster] = tmpClust_Temp;
 
-                //Form1.FirStaticVar.tmpCluster[index_for_compatible_cluster].SupervisedCounter++;
+                
 
             }
 
@@ -398,7 +394,7 @@ namespace Sem_Supervised_Sites_PartB
 
             for (int i = 0; i < num_of_topics; i++)
             {
-                int matrix_rows = Form1.FirStaticVar.tmpCluster[i].SupervisedCounter; ///  <<--------------DANGER - Not well updated
+                int matrix_rows = Form1.FirStaticVar.tmpCluster[i].SupervisedCounter; 
                 int matrix_cols = pca_result_size;
 
                 double[,] matrix = new double[matrix_rows, matrix_cols];
@@ -411,10 +407,9 @@ namespace Sem_Supervised_Sites_PartB
                     }
 
                 }
-                // mLC_temp[i] = new double[matrix_rows, matrix_cols];
-                //mLC_temp[i] = matrix;
+            
                 mLC_temp.Add(matrix);
-                //mLC.AddLast(matrix);
+                
 
             }
 
@@ -430,7 +425,7 @@ namespace Sem_Supervised_Sites_PartB
                 int index_for_compatible_cluster;
 
                 string site_name = row.Cells[0].Value.ToString();
-                //string[] tokens = site_name.Split('.');
+                
                 string cluster_name = row.Cells[1].Value.ToString();
 
                 index_for_compatible_cluster = Form1.FirStaticVar.dictionary_ClusterNameToValue_KeyToVal(cluster_name);
@@ -454,7 +449,7 @@ namespace Sem_Supervised_Sites_PartB
                     }
 
                 }
-                //Sem_Supervised_Sites_PartB.Form1.vectorNode vectorNodetmp;
+                
             }
 
             for (int i = 0; i < num_of_topics; i++)
@@ -463,11 +458,6 @@ namespace Sem_Supervised_Sites_PartB
         }
 
 
-        //   private void GUI3_Presentation()
-        //   {
-
-
-        //   }
 
         private void button5_Click(object sender, EventArgs e)
         {
@@ -507,9 +497,7 @@ namespace Sem_Supervised_Sites_PartB
             date4 = DateTime.Now;
             duration2 = date4 - date3;
 
-            ////////// Need to do the presentation of GUI 3 !!!!!!!!    <----------
-
-            //Form1.FirStaticVar.panel3.dataGridView1
+          
 
             Form1.FirStaticVar.panel3.Show_Dictionary();
             Form1.FirStaticVar.panel3.Show_Datagridview2_Sites_Vectors();
@@ -519,8 +507,7 @@ namespace Sem_Supervised_Sites_PartB
             Form1.FirStaticVar.panel3.Show();
             Form1.FirStaticVar.panel3.Datagridview_No_Selection();
             Form1.FirStaticVar.panel3.BringToFront();
-            //Form1.StatPanel3.Show();
-            //Form1.StatPanel3.BringToFront();
+          
 
         }
 
@@ -566,21 +553,7 @@ namespace Sem_Supervised_Sites_PartB
 
         private void button6_Click(object sender, EventArgs e)
         {
-           /* foreach (string s in siteList_items)
-            {
-                bool finish = false;
-                for (int i = 0; i < SitesFileNamesList_StopWords.Count() && !finish; i++)
-                {
-                    if (SitesFileNamesList_StopWords[i].Contains(s))
-                    {
-                        SitesFileNamesList_StopWords.RemoveAt(i);
-                        finish = true;
-                    }
-                }
-            }
-            siteList_items.Clear();
-            //this.dataGridView1.Rows.Clear();
-            this.dataGridView2.Rows.Clear(); */
+      
             dataGridView1.Refresh();
             dataGridView2.Refresh();
             this.Hide();
@@ -630,36 +603,26 @@ namespace Sem_Supervised_Sites_PartB
                 string dataGrid2NewRow_string_value = dataGrid2NewRow.Cells[0].Value.ToString();
 
                 for (int i = 0; i < SitesFileNamesList_StopWords.Count(); i++)
-             //   for (int i = 0; i < siteList_items.Count(); i++)
                 {
                     string[] tokens = dataGrid2NewRow_string_value.Split('.');
 
-                    //if (SitesFileNamesList_StopWords[i].Contains(dataGrid2NewRow_string_value))
                     if (SitesFileNamesList_StopWords[i].Contains(tokens[0]))
-                   // if (siteList_items[i].Contains(dataGrid2NewRow_string_value))
                     {
                         SitesFileNamesList_StopWords.RemoveAt(i);
                         break;
                     }
                 }
 
-                //var row = dataGridView1.Rows[cell.RowNumber];
+                
                 siteList_items.RemoveAt(cell.RowIndex);
-                // SitesFileNamesList_StopWords.RemoveAt(cell.RowIndex);
+                
                 dataGridView2.Rows.Remove(dataGridView2.Rows[cell.RowIndex]);
 
 
 
             }
 
-            //            foreach (DataGridViewRow dr in dataGridView2.SelectedRows)
-            //            {
-
-            //                dataGridView2.Rows.Remove(dr);
-
-            //            }
-
-
+        
 
         }
 
@@ -671,7 +634,7 @@ namespace Sem_Supervised_Sites_PartB
                 for (int i = 0; i < SitesFileNamesList_StopWords.Count() && !finish; i++)
                 {
                     string[] tokens = s.Split('.');
-                    //if (SitesFileNamesList_StopWords[i].Contains(s))
+                    
                     if (SitesFileNamesList_StopWords[i].Contains(tokens[0]))
                     {
                         SitesFileNamesList_StopWords.RemoveAt(i);
@@ -743,13 +706,7 @@ namespace Sem_Supervised_Sites_PartB
             num_of_rows_datagridview2 = dataGridView2.Rows.Count;
 
             
-          /*  DataGridViewComboBoxCell cbo_updated1 = new DataGridViewComboBoxCell();
-
-            for (int j = 0; j < Form1.FirStaticVar.Topics.Count(); j++)
-            {
-                cbo_updated2.Items.Add(Form1.FirStaticVar.Topics[j]);
-                cbo_updated1.Items.Add(Form1.FirStaticVar.Topics[j]);
-            } */
+   
 
             if (num_of_rows_datagridview2 > 0)
             {
@@ -769,7 +726,7 @@ namespace Sem_Supervised_Sites_PartB
                     object cbo_val;
 
 
-                    txt2_TextBoxCell.Value = row.Cells[0].Value.ToString(); /// <----------------- Gets empty strings
+                    txt2_TextBoxCell.Value = row.Cells[0].Value.ToString(); 
                     updated_row_dataGridView2.Cells.Add(txt2_TextBoxCell);
                     txt2_TextBoxCell.ReadOnly = true;
                     cbo_val = row.Cells[1].Value;
@@ -792,10 +749,7 @@ namespace Sem_Supervised_Sites_PartB
                     updated_row_dataGridView2_Array[updated_row_dataGridView2_index] = new DataGridViewRow();
                     updated_row_dataGridView2_Array[updated_row_dataGridView2_index] = updated_row_dataGridView2;
 
-              ///      DataGridViewRow row_to_delete = new DataGridViewRow();
-              ///      row_to_delete = row;
-              ///      dataGridView2.Rows.Remove(row_to_delete);
-                    //dataGridView2.Rows.Add(updated_row_dataGridView2);
+     
                     updated_row_dataGridView2_index++;
                                 
                 }
@@ -810,8 +764,6 @@ namespace Sem_Supervised_Sites_PartB
 
                 }
 
- //               foreach (DataGridViewRow row_updated in updated_row_dataGridView2_Array)
- //                   dataGridView2.Rows.Add(row_updated);
                  
             }
 
@@ -834,7 +786,7 @@ namespace Sem_Supervised_Sites_PartB
                     object cbo_val;
 
 
-                    txt1_TextBoxCell.Value = row.Cells[0].Value.ToString(); /// <----------------- Gets empty strings
+                    txt1_TextBoxCell.Value = row.Cells[0].Value.ToString(); 
                     updated_row_dataGridView1.Cells.Add(txt1_TextBoxCell);
                     txt1_TextBoxCell.ReadOnly = true;
                     cbo_val = row.Cells[1].Value;
@@ -857,41 +809,13 @@ namespace Sem_Supervised_Sites_PartB
                     updated_row_dataGridView1_Array[updated_row_dataGridView1_index] = new DataGridViewRow();
                     updated_row_dataGridView1_Array[updated_row_dataGridView1_index] = updated_row_dataGridView1;
 
-                 ///   dataGridView1.Rows.Remove(row);
-                 ///   dataGridView1.Rows.Add(updated_row_dataGridView1);
+
                     updated_row_dataGridView1_index++;
 
-                    // cleaning list in case that deleted topic will be re-entered again.
-                    //Form1.FirStaticVar.Deleted_Topics.Clear();
 
                 }
                 
-                
-                
-                
-                
-                /* foreach (DataGridViewRow row in dataGridView1.Rows)
-                {
-
-                    DataGridViewComboBoxCell cbo_updated1 = new DataGridViewComboBoxCell();
-
-                    for (int j = 0; j < Form1.FirStaticVar.Topics.Count(); j++)
-                    {
-                        cbo_updated1.Items.Add(Form1.FirStaticVar.Topics[j]);
-                    }
-
-                    DataGridViewRow updated_row_dataGridView1 = new DataGridViewRow();
-                    DataGridViewTextBoxCell txt1_TextBoxCell = new DataGridViewTextBoxCell();
-
-                    txt1_TextBoxCell.Value = row.Cells[0].Value.ToString();
-                    updated_row_dataGridView1.Cells.Add(txt1_TextBoxCell);
-                    txt1_TextBoxCell.ReadOnly = true;
-                    updated_row_dataGridView1.Cells.Add(cbo_updated1);
-                    updated_row_dataGridView1.Height = 25;
-                    dataGridView1.Rows.Remove(row);
-                    dataGridView1.Rows.Add(updated_row_dataGridView1);
-
-                } */
+              
                 dataGridView1.Rows.Clear();
 
                 for (int i = 0; i < num_of_rows_datagridview1; i++)

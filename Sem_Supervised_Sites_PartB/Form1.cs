@@ -62,26 +62,13 @@ namespace Sem_Supervised_Sites_PartB
             dictionary_ClusterNameToValue = new Dictionary<string, int>();
 
            
-            panel2.Hide();  // <-----
-            panel3.Hide(); // <-----
-            StatPanel2 = panel2; // <-----
-            //StatPanel3 = panel3;
-            StatPanel4 = panel4; // <-------
+            panel2.Hide();  
+            panel3.Hide(); 
+            StatPanel2 = panel2; 
+            StatPanel4 = panel4; 
 
            
         }
-
-/*      private OpenFileDialog openFileDialog = new OpenFileDialog();
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            openFileDialog.Filter = "Text Files (*.txt)|*.txt";
-            openFileDialog.Title = "Type File";
-            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
-            {
-                string filename = openFileDialog.FileName;
-            }
-        } */
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -104,26 +91,34 @@ namespace Sem_Supervised_Sites_PartB
 
         private void button2_Click(object sender, EventArgs e)
         {
-            //dictionary_ClusterNameToValue.Remove(listBox1.SelectedItem.ToString());
-            object Selected = listBox1.SelectedItem;
-            string Selected_Topic_String = Selected.ToString();
+            
 
-            if (Deleted_Topics == null)
+            try
             {
-                Deleted_Topics = new List<string>();
+                object Selected = listBox1.SelectedItem;
+                string Selected_Topic_String = Selected.ToString();
 
+                if (Deleted_Topics == null)
+                {
+                    Deleted_Topics = new List<string>();
+                }
+
+
+                for (int j = 0; j < tmpCluster.Count(); j++)
+                {
+                    if (tmpCluster[j].clusterName.Equals(Selected_Topic_String))
+                    {
+                        Deleted_Topics.Add(Selected_Topic_String);
+                        tmpCluster.RemoveAt(j);
+                        break;
+                    }
+                }
             }
 
-
-            for (int j = 0; j < tmpCluster.Count() ; j++)
+            catch
             {
-                if (tmpCluster[j].clusterName.Equals(Selected_Topic_String))
-                {
-                    Deleted_Topics.Add(Selected_Topic_String);
-                    tmpCluster.RemoveAt(j);
-                    break;
 
-                }
+
             }
 
 
@@ -198,25 +193,25 @@ namespace Sem_Supervised_Sites_PartB
             
             if (tmpCluster == null)
             {
-                // tmpCluster = new tmpClust[listBox1.Items.Count];
+                
                 tmpCluster = new List<tmpClust>();
             }
 
             if (Topics == null)
             {
-                //Topics = new string[listBox1.Items.Count];
+                
                 Topics = new List<string>();
             }
-            tmpCluster.Clear(); // <------------- Added Here
+            tmpCluster.Clear(); 
             Topics.Clear();
             dictionary_ClusterNameToValue.Clear(); 
             for (int i = 0; i < listBox1.Items.Count; i++)
             {
                 object s = listBox1.Items[i];
-                //Topics[i] = s.ToString();
+                
                 string s_temp = s.ToString();
 
-                //if (!Topics.Exists(element => element == s_temp ))
+                
                 Topics.Add(s.ToString());
 
                 found_in_tmp_cluster=false;
@@ -234,9 +229,7 @@ namespace Sem_Supervised_Sites_PartB
                     temp_for_new_cell.SupervisedCounter = 0;
                     temp_for_new_cell.clusterName = Topics[i];
                     temp_for_new_cell.relatedPoints = new LinkedList<vectorNode>();
-                    //tmpCluster[i].SupervisedCounter = 0;
-                    //tmpCluster[i].clusterName = Topics[i];
-                    //tmpCluster[i].relatedPoints = new LinkedList<vectorNode>();
+
                     tmpCluster.Add(temp_for_new_cell);
                 }
                  
@@ -250,7 +243,7 @@ namespace Sem_Supervised_Sites_PartB
 
             }
 
-            panel2.UpdateGUI2(); //<--------
+            panel2.UpdateGUI2(); 
             StatPanel2.Show();
             StatPanel2.BringToFront();
            
@@ -269,7 +262,7 @@ namespace Sem_Supervised_Sites_PartB
 
         private void button4_Click(object sender, EventArgs e)
         {
-           // dictionary_ClusterNameToValue.Clear();
+           
             listBox1.Items.Clear();
             num_of_topics = 0;
             topicAdd = false;
@@ -348,10 +341,7 @@ namespace Sem_Supervised_Sites_PartB
             return num_of_topics;
         }
 
-      /*  public tmpClust[] getTmpClusterArray()
-        {
-            return tmpCluster;
-        } */
+   
 
         public List<tmpClust> getTmpClusterArray()
         {

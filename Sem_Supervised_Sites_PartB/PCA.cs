@@ -1,8 +1,4 @@
-﻿#region Author © Verein Konstantin, 2012
-//KocT9H@gmail.com
-#endregion
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -60,13 +56,8 @@ namespace PCA_Logic
         {
             
             this.covarianceMatrix = CreateCovMatrix(sourceMatrix);
-           /*SingularValueDecomposition svd = new SingularValueDecomposition(this.covarianceMatrix);
-            this.eigenValues = svd.Diagonal;
-            //Each column is corresponding eigen vector
-            this.eigenVectors = svd.LeftSingularVectors;*/
-
-           //double[,] matr11 = new double[2, 2] { { 8, 5}, { 8, -10 } };
-           Accord.Math.Decompositions.EigenValueDecomposition evd =
+ 
+            Accord.Math.Decompositions.EigenValueDecomposition evd =
                 new Accord.Math.Decompositions.EigenValueDecomposition(this.covarianceMatrix);
 
             this.eigenValues = evd.RealEigenValues;                      
@@ -151,19 +142,7 @@ namespace PCA_Logic
             
             C = Transpose(C);
 
-            /*Console.WriteLine("\nsite 0 is: " + C[0, 0]);
-            Console.WriteLine("site 0 is: " + C[0, 1]);
-            Console.WriteLine("site 0 is: " + C[0, 2]);
-
-            Console.WriteLine("\nsite 1 is: " + C[1, 0]);
-            Console.WriteLine("site 1 is: " + C[1, 1]);
-            Console.WriteLine("site 1 is: " + C[1, 2]);
-
-            Console.WriteLine("\nsite 2 is: " + C[2, 0]);
-            Console.WriteLine("site 2 is: " + C[2, 1]);
-            Console.WriteLine("site 2 is: " + C[2, 2]);*/
-            //Console.WriteLine("site 3 is: " + C[3, 0]);
-            //Console.WriteLine("site 3 is: " + C[3, 1]);
+  
             return C;
         }
         
@@ -193,17 +172,9 @@ namespace PCA_Logic
         public double[,] Result
         {
             get { return this.resultMatrix; }
-            //protected set { this.resultMatrix = value; }
+            
         }
 
-       /* static void Main(string[] args)
-        {
-            //4 sites 2 words in each
-            double[,] matr = new double[2, 4] { { 1, 9, 11, 3 }, { 8, 2, 4, 6 } }; //{ 3, 7, 2, 5 }
-            double[,] matr2 = new double[4, 2] { { 1, 8}, {9,2}, {11,4},{3,6} };
-            double[,] matr3 = new double[4, 3] { { 5, 0, 0 }, { 6, 0,0 }, { 0, 0,2 }, { 0, 0,3 } };
-            PCA pc = new PCA(matr2, 1);
-            pc.compute();
-        }*/
+       
     }
 }

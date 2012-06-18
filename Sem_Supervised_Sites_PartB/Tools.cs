@@ -1,8 +1,4 @@
-﻿#region Author © Verein Konstantin, 2012
-//KocT9H@gmail.com
-#endregion
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +16,6 @@ namespace Sem_Supervised_Sites_PartB
     /// 
     public static class Tools
     {
-        //public static Dictionary<string, int> dictionary;
         public static int num_of_words_in_dictionary;
         public static string[] words_in_dictionary;
 

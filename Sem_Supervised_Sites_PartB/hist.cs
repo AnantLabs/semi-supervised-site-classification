@@ -66,7 +66,7 @@ namespace Sem_Supervised_Sites_PartB
                 myBar.Bar.Fill = new Fill(Color.FromArgb(brightPastelArray[p % 15, 0], brightPastelArray[p % 15, 1], brightPastelArray[p % 15, 2]), Color.White,
                     Color.FromArgb(brightPastelArray[p % 15, 0], brightPastelArray[p % 15, 1], brightPastelArray[p % 15, 2]));
                 y = new double[clustNum];
-                //generateRGB();
+                
             }
             
             myPane.XAxis.MajorTic.IsBetweenLabels = true;
